@@ -1786,7 +1786,7 @@ border-right: 2px solid rgb(137,137,137);
   background: #cccccc;
   background: linear-gradient(to bottom right, #cccccc,#919191, #c9c9c9,#aaaaaa,#cacaca, #919191,#cccccc);
   box-shadow: 0 5px 10px 5px rgba(0,0,0,.5);
-  width: 879px;
+  width: 739px;
   border-radius: 20px;
   margin-left:15px;
 }
@@ -1797,9 +1797,9 @@ border-right: 2px solid rgb(137,137,137);
   border-bottom: 2px solid rgb(137,137,137);
   border-right: 2px solid rgb(137,137,137);
   height: 200px;
-  width: 845px;
+  width: 725px;
   transition: height 0.2s;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 #buttonsContainer-header{
@@ -1838,7 +1838,7 @@ border-right: 2px solid rgb(137,137,137);
     height: 40px;
     line-height: 40px;
     display: inline-block;
-    width: 650px;
+    width: 450px;
     margin-left: 5px;
     text-align: center;
 }
