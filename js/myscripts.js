@@ -39,6 +39,9 @@ var terraformingStep = [1, 1, 1, 2];
 var terraformingSpecialCombo = [[], [], [8], [-24, -20, 0]];
 var log_all = []
 var log_current = []
+var cardsInHand = new Set();
+var cardsUsed = new Set();
+var lastClickedCard = null;
 
 //parse the url
 urlString = window.location.href;
@@ -68,19 +71,7 @@ function showAll() {
   // document.getElementById("totalColonies").innerHTML = displayedColonies;
   // document.getElementById("totalGlobals").innerHTML = displayedGlobals;
   
-  
-  resourceTypesSmall.forEach(function (type, index) {
-    document.getElementById(type).innerHTML = resourceValue[index];
-    document.getElementById("prod_" + type).value = resourceProduction[index];
-  });
-
-  terraformingTypesSmall.forEach(function (type, index) {
-    document.getElementById("terraforming_" + type).value = terraformingValue[index];
-    if (type != "tr") {
-      document.getElementById("terraforming_" + type + "_slider").value = terraformingValue[index];
-    }
-  });
-
+  refreshStatus();
   
   //making all buttons inactive
   y = document.querySelectorAll('button.active');
@@ -92,19 +83,87 @@ function showAll() {
   //showing all cards
   x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
-
+  console.log("invoked ShowAll()");
 }
 
 ////////////////////// My code! ////////////////////////////
+function refreshScreen() {
+  refreshStatus();
+  showHand();
+}
+
+function refreshStatus() {
+  resourceTypesSmall.forEach(function (type, index) {
+    document.getElementById(type).innerHTML = resourceValue[index];
+    document.getElementById("prod_" + type).value = resourceProduction[index];
+  });
+
+  terraformingTypesSmall.forEach(function (type, index) {
+    document.getElementById("terraforming_" + type).value = terraformingValue[index];
+    if (type != "tr") {
+      document.getElementById("terraforming_" + type + "_slider").value = terraformingValue[index];
+    }
+  });
+}
+
+function showUsed() {
+  console.log("cardsPlayed: " + cardsUsed);
+  x = document.querySelectorAll('li.filterDiv');
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].querySelector(".number") != null) {
+      var rawNumber = x[i].querySelector(".number").textContent.substring(1);
+      if (cardsUsed.has(rawNumber)) {
+        w3AddClass(x[i], "show");
+        console.log("showing " + x[i].querySelector(".number").textContent + " by .number");
+      }
+    } else {
+      if (cardsUsed.has(x[i].id)) {
+        w3AddClass(x[i], "show");
+        console.log("showing " + x[i].id+ " by .id");
+      }
+    }
+  }
+  li = document.querySelectorAll('li.show');   //obtaining the new visible list after the subfilters check
+  for (var i = 0;  i < li.length; i++) { li[i].classList.add("show");}
+}
+
+function showHand() {
+  console.log("cardsInHand: " + cardsInHand);
+  x = document.querySelectorAll('li.filterDiv');
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].querySelector(".number") != null) {
+      var rawNumber = x[i].querySelector(".number").textContent.substring(1);
+      if (cardsInHand.has(rawNumber)) {
+        w3AddClass(x[i], "show");
+        console.log("showing " + x[i].querySelector(".number").textContent + " by .number");
+      }
+    } else {
+      if (cardsInHand.has(x[i].id)) {
+        w3AddClass(x[i], "show");
+        console.log("showing " + x[i].id+ " by .id");
+      }
+    }
+  }
+  li = document.querySelectorAll('li.show');   //obtaining the new visible list after the subfilters check
+  for (var i = 0;  i < li.length; i++) { li[i].classList.add("show");}
+}
+
 function undo() {
-  var lastAction = log_current.pop();
-  if (log_current.length > 0) {
+  if (log_current.length > 1) {  
+    var resp = confirm("Do you really want to UNDO the following action?\n" + log_current[log_current.length - 1][0]);
+    if (resp == false) {
+      return;
+    }
+
+    var lastAction = log_current.pop();
     var stateBeforeLastAction = log_current[log_current.length - 1];
     resourceValue = stateBeforeLastAction[1];
     resourceProduction = stateBeforeLastAction[2];
     terraformingValue = stateBeforeLastAction[3];
-    showAll();
-    alert("Undone the last action: " + lastAction[0] + ". Undo only reverts resource, production, and terraforming. Other changes are not tracked.");
+    refreshScreen();
+    alert("Undone the last action:\n" + lastAction[0] + ".\n\n** Undo only reverts resource, production, and terraforming. Other changes are not tracked.");
   } else {
     alert("This is the start of the current stage. Cannot undo anymore.")
   }
@@ -170,7 +229,7 @@ function produce() {
   log_all.push(log_current.slice(0));
   log_current = [["Produce", resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]];
   console.log(log_all);
-  showAll();
+  refreshScreen();
 }
 
 function updateProd(id) {
@@ -232,12 +291,20 @@ function buyAndSave(price) {
   if (projCardForPromotion == null) {
     alert ("Error. No card is selected for purchase.");
     return;
+  } else if (cardsInHand.has(projCardForPromotion.number)) {
+    alert ("This card is already in hand.");
+    return;
   }
 
   // Pay the price.
   resourceValue[resourceTypeToIdx["MC"]] -= price;
   log_current.push(["Bought a proj card: " + projCardForPromotion.title, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
-  showAll();
+
+  // Add to hand set.
+  cardsInHand.add(projCardForPromotion.number);
+  // document.getElementById("buyAndSave").disabled = true;
+  // document.getElementById("saveCard").disabled = true;
+  refreshScreen();
 }
 
 function payAndPromote() {
@@ -308,11 +375,12 @@ function payAndPromote() {
   }
   
   log_current.push([logStr, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
-  
+  cardsUsed.add(projCardForPromotion.number);
+  cardsInHand.delete(projCardForPromotion.number);
   projCardForPromotion = null;
   document.getElementById("paymentFooter").style = "display: none";
   clearInput();
-  showAll();
+  refreshScreen();
 }
 
 //////////////////////PARSE function ////////////////////////////////
@@ -328,18 +396,19 @@ function parseURLParams(url) {
 
 ////////////////////// Display only pointed cards ///////////////////
 function displayCardsOnly() {
-
+  console.log("cards: " + cards);
   //showing only the pointed cards
   x = document.querySelectorAll('li.filterDiv');
   for (i = 0; i < x.length; i++) {
     if (x[i].querySelector(".number") != null) {
       if (cards.includes(x[i].querySelector(".number").textContent)) {
         w3AddClass(x[i], "show");
+        console.log("showing " + x[i].querySelector(".number").textContent + "by .number");
       }
-    }
-    else {
+    } else {
       if (cards.includes(x[i].id)) {
         w3AddClass(x[i], "show");
+        console.log("showing " + x[i].id+ "by .id");
       }
     }
 
@@ -348,6 +417,7 @@ function displayCardsOnly() {
 
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
+  console.log("invoked filterFunction()");
   var input, filter, ul, li, a, i, x;
 
   clickedElementID = document.getElementById(id);
@@ -871,6 +941,11 @@ function selectCard (clickedCard) {
 
     //change the shadow of the clicked card
     clickedCard.classList.toggle("clicked-card");
+    if (lastClickedCard != null && lastClickedCard != clickedCard) {
+      w3RemoveClass(lastClickedCard, "last-clicked-card");
+    }
+    lastClickedCard = clickedCard
+    clickedCard.classList.toggle("last-clicked-card");
     
     projData.forEach(function (projCard, index) {
       if (projCard.number == selectedCardNumber.substring(1)) {
