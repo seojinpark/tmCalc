@@ -1,0 +1,50 @@
+Prelude Corporations 
+
+Cheung Shing Mars
+Building tag
+Starting resources:
+44 M$
+Increase M$ 3
+(You start with 44 M$ and 3 M$ production.)
+Effect:
+Building: -2 M$
+(Effect: When you play a building tag, you pay 2 M$ less for it.)
+
+Point Luna
+Earth tag, Space tag
+Starting resources:
+38 M$
+Increase Titanium 1
+(You start with 38 M$ and 1 titanium production.)
+Effect:
+Earth: +Card
+(Effect: When you play an Earth tag, including this, draw a card.)
+
+Robinson Industries 
+(No tags) 
+Starting resources: 
+47 M$
+(You start with 47 M$.)
+Action:
+4 M$ -> Increase ? 1*
+(Action: Spend 4 M$ to increase (one of) your LOWEST PRODUCTION 1 step.)
+
+Valley Trust
+Earth tag
+Starting resources: 
+37 M$
+Prelude card*
+(You start with 37 M$. As your first action, draw 3 Prelude cards, and play one of them. Discard the other two.)
+Effect:
+Science: -2 M$
+(Effect: When you play a science tag, you pay 2 M$ less for it.)
+
+Vitor
+Earth tag
+Starting resources: 
+45 M$
+AWARDS
+(You start with 45 M$. As your first action, fund an award for free.)
+Effect:
+VP: ?*: 3 M$
+(Effect: When you play a card with a NON-NEGATIVE VP icon, including this, gain 3 M$.)

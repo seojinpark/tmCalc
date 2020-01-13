@@ -1,0 +1,54 @@
+Colonies Corporations
+
+Aridor
+(No tags) 
+Starting resources: 
+40 M$ 
+Colony Tile
+(You start with 40 M$. As your first action, put an additional Colony Tile of your choice into play.) 
+Effect: 
+New tag: Increase M$ 1
+(Effect: When you get a new tag in play, increase your M$ production 1 step.) 
+
+Arklight
+Animal tag
+Starting resources: 
+45 M$ 
+Increase M$ 2
+(You start with 45 M$. Increase your M$ production 2 steps. 1 VP per 2 animalson this card.) 
+Effect: 
+Animal tag/Plant tag: Animal resource
+(Effect: When you play an Animal or Plant tag, including this, add 1 animal to this card.)
+VP: 1/2 Animal resource
+
+Polyphemos
+(No tags) 
+Starting resources: 
+50 M$ 
+Increase M$ 5
+5 Titanium
+(You start with 50 M$. Increase your M$ production 5 steps. Gain 5 titanium.) 
+Effect: 
+Card*: 5 M$
+(Effect: When you buy a card to hand, pay 5 M$ instead of 3 M$, including the starting hand.) 
+
+Poseidon
+(No tags) 
+Starting resources: 
+45 M$ 
+Colony
+(You start with 45 M$. As your first action, place a colony.) 
+Effect: 
+any-colony: Increase M$ 1
+(Effect: When any colony is placed, including this, raise your M$ production 1 step.) 
+
+Stormcraft
+Jovian tag 
+Starting resources: 
+48 M$ 
+(You start with 48 M$.)
+Action:
+-> Floater*
+Floater = Heat Heat
+(Action: Add 1 floater to ANY card.
+Effect: Floaters on this card may be used as 2 heat each.)

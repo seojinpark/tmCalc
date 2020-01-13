@@ -1,0 +1,297 @@
+P01: Allied Bank
+Earth tag
+------
+Increase M$ 4
+3 M$
+(Increase your M$ production 4 steps. Gain 3 M$.)
+
+P02: Aquifer Turbines
+Power tag
+------
+Ocean Tile
+Increase Energy 2
+-3 M$
+(Place an ocean tile. Increase your energy production 2 steps. Remove 3 M$.)
+
+P03: Biofuels
+Microbe tag
+------
+Increase Plant 1
+Increase Energy 1
+Plant Plant
+(Increase your plant production and energy production 1 step each. Gain 2 plants.)
+
+P04: Biolab
+Science tag
+------
+Increase Plant 1
+Card Card Card
+(Increase your plant production 1 step. Draw 3 cards.)
+
+P05: Biosphere Support
+Plant tag
+------
+Decrease M$ 1
+Increase Plant 2
+(Decrease your M$ production 1 step. Increase your plant production 2 steps.)
+
+P06: Business Empire
+Earth tag
+------
+Increase M$ 6
+-6 M$
+(Increase your M$ production 6 steps. Remove 6 M$.)
+
+P07: Dome Farming
+Plant tag, Building tag
+------
+Increase Plant 1
+Increase M$ 2
+(Increase your plant production 1 step. Increase your M$ production 2 steps.)
+
+P08: Donation
+------
+21 M$
+(Gain 21 M$.)
+
+P09: Early Settlement
+City tag, Building tag
+------
+City Tile
+Increase Plant 1
+(Place a city tile. Increase your plant production 1 step.)
+
+P10: Ecology Experts
+Plant tag, Microbe tag
+------
+Increase Plant 1
+PLAY A CARD FROM HAND, IGNORING GLOBAL REQUIREMENTS
+(Increase your plant production 1 step.)
+
+P11: Excentric Sponsor
+------
+PLAY A CARD FROM HAND, REDUCING ITS COST BY 25 M$
+
+P12: Experimental Forest
+Plant tag
+------
+Greenery Tile
+Card^Plant Card^Plant
+(Place a greenery tile and increase oxygen 1 step. Reveal cards from the deck until you have revealed 2 plant-tag cards. Take these into your hand, and discard the rest.)
+
+P13: Galilean Mining
+Jovian tag
+------
+Increase Titanium 2
+-5 M$
+(Increase your titanium production 2 steps. Remove 5 M$.)
+
+P14: Great Aquifer
+------
+Ocean Tile Ocean Tile
+(Place 2 ocean tiles.)
+
+P15: Huge Asteroid
+------
+TempUp TempUp TempUp
+-5 M$
+(Raise temperature 3 steps. Remove 5 M$.)
+
+P16: Io Research Outpost
+Science tag, Jovian tag
+------
+Increase Titanium 1
+Card
+(Increase your titanium production 1 step. Draw 1 card.)
+
+P17: Loan
+------
+Decrease M$ 2
+30 M$
+(Decrease your M$ production 2 steps. Gain 30 M$.)
+
+P18: Martian Industries
+Building tag
+------
+Increase Energy 1
+Increase Steel 1
+6 M$
+(Increase your energy production and steel production 1 step each. Gain 6 M$.)
+
+P19: Metal-Rich Asteroid
+------
+TempUp
+4 Titanium
+4 Steel
+(Raise temperature 1 step. Gain 4 titanium, and 4 steel.)
+
+P20: Metals Company
+------
+Increase M$ 1
+Increase Steel 1
+Increase Titanium 1
+(Increase your M$ production, steel production, and titanium production 1 step each.)
+
+P21: Mining Operations
+Building tag
+------
+Increase Steel 2
+4 Steel
+(Increase your steel production 2 steps. Gain 4 steel.)
+
+P22: Mohole
+Building tag
+------
+Increase Heat 3
+3 Heat
+(Increase your heat production 3 steps. Gain 3 heat.)
+
+P23: Mohole Excavation
+Building tag
+------
+Increase Steel 1
+Increase Heat 2
+2 Heat
+(Increase your steel production 1 step, and your heat production 2 steps. Gain 2 heat.)
+
+P24: Nitrogen Shipment
+------
+TR
+Increase Plant 1
+5 M$
+(Raise your terraform rating 1 step. Increase your plant production 1 step. Gain 5 M$.)
+
+P25: Orbital Construction Yard
+Space tag
+------
+Increase Titanium 1
+4 Titanium
+(Increase your titanium production 1 step. Gain 4 titanium.)
+
+P26: Polar Industries
+Building tag
+------
+Ocean Tile
+Increase Heat 2
+(Place 1 ocean tile. Increase your heat production 2 steps.)
+
+P27: Power Generation
+Power tag
+------
+Increase Energy 3
+(Increase your energy production 3 steps.)
+
+P28: Research Network
+Wild tag
+------
+3 Card
+Increase M$ 1
+(Draw 3 cards, and increase your M$ production 1 step. After being played, when you perform an action, the wild-tag is any tag of your choice.)
+
+P29: Self-Sufficient Settlement
+City tag, Building tag
+------
+City Tile
+Increase M$ 2
+(Place a city tile. Increase your M$ production 2 steps.)
+
+P30: Smelting Plant
+Building tag
+------
+O2 O2
+5 Steel
+(Raise oxygen 2 steps. Gain 5 steel.)
+
+P31: Society Support
+------
+Decrease M$ 1
+Increase Plant 1
+Increase Energy 1
+Increase Heat 1
+(Decrease your M$ production 1 step. Increase your plant production, energy production, and heat production 1 step each)
+
+P32: Supplier
+Power tag
+------
+Increase Energy 2
+4 Steel
+(Increase your energy production 2 steps. Gain 4 steel.)
+
+P33: Supply Drop
+------
+3 Titanium
+8 Steel
+3 Plant
+(Gain 3 titanium, 8 steel, and 3 plants.)
+
+P34: UNMI Contractor
+Earth tag
+------
+3 TR
+Card
+(Raise your terraform rating 3 steps. Draw 1 card.)
+
+P35: Acquired Space Agency
+------
+6 Titanium
+Card^Space Card^Space
+(Gain 6 titanium. Reveal cards from the deck until you have revealed 2 space cards. Take those into hand, and discard the rest.)
+
+P36: House Printing 
+Building tag
+Cost: 10 
+------
+Increase Steel 1
+(Increase your steel production 1 step.) 
+VP: 1 
+
+P37: Lava Tube Settlement 
+City tag, Building tag
+Cost: 15 
+------
+Reduce Energy 1 
+Increase M$ 2 
+City Tile* 
+(Decrease your Energy production 1 step and increase your M$ production 2 steps. Place a City tile ON A VOLCANIC AREA, same as Lava Flows, regardless of adjacent cities.) 
+
+P38: Martian Survey
+Science tag, Event tag
+Cost: 9
+Requires: max 4% O2
+------
++Card +Card
+(Oxygen must be 4% or lower. Draw 2 cards.)
+VP: 1
+
+P39: Psychrophiles 
+Microbe tag
+Cost: 2 
+Requires: max -20 C
+-> Microbe
+Plant cards: Microbe = 2M$
+(Action: Add a microbe to this card.
+Effect: When paying for a plant card, microbes here may be used as 2 M$ each.)
+------ 
+(Requires temperature -20 C or colder.)
+
+P40: Research Coordination 
+Wild tag
+Cost: 4
+------ 
+(After being played, when you perform an action, the wild tag counts as any tag of your choice.)
+
+P41: SF Memorial 
+Building tag
+Cost: 7 
+------
++Card
+(Draw 1 card.) 
+VP: 1 
+
+P42: Space Hotels 
+Earth tag, Space tag
+Cost: 12
+Requires: Earth tag, Earth tag
+------
+Increase M$ 4
+(Requires 2 Earth tags. Increase your M$ production 4 steps.)

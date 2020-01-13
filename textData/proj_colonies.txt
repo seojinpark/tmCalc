@@ -1,0 +1,421 @@
+Colonies project cards
+
+C01: Airliners
+Cost: 11
+Requires: 3 Floaters
+------
+Increase M$ 2
+Gain Floater Floater*
+(Requires that you have 3 floaters. Increase your M$ production 2 steps. Add 2 floaters to ANOTHER card.)
+VP: 1
+
+C02: Air Raid
+Event tag
+Cost: 0
+------
+-Floater
+STEAL 5 any-M$
+(Requires that you lose 1 floater. Steal 5 M$ from any player.)
+
+C03: Atmo Collectors
+Cost: 15
+-> Floater OR
+Floater -> 2 Ti / 3 Energy / 4 Heat
+------
+Gain Floater Floater*
+(Add 2 floaters to ANY card)
+
+C04: Community Services
+Cost: 13
+------
+Increase M$ 1 / no tag*
+(Increase your M$ production 1 step per CARD WITH NO TAGS you have, including this.)
+VP: 1
+
+C05: Conscription
+Earth tag, Event tag
+Cost: 5
+Requires: Earth tag, Earth tag
+------
+NEXT CARD: -16 M$ 
+(Requires 2 Earth tags. The next card you play this generation costs 16 M$ less.)
+VP: -1
+
+C06: Corona Extractor
+Power tag, Space tag
+Cost: 10
+Requires: 4 Science tags
+------
+Increase Energy 4
+(Requires 4 Science tags. Increase your energy production 4 steps.)
+
+C07: Cryo-Sleep
+Science tag
+Cost: 10
+Trade: -1 resource
+(Effect: When you trade, you pay 1 less resource for it.)
+------
+VP: 1
+
+C08: Earth Elevator
+Earth tag, Space tag
+Cost: 43
+------
+Increase Titanium 3
+(Increase your titanium production 3 steps.)
+VP: 4
+
+C09: Ecology Research
+Science tag, Animal tag, Microbe tag, Plant tag
+Cost: 21
+------
+Increase Plant/colony
+Gain Animal* Microbe Microbe*
+(Increase your plant production 1 step for each colony you own. Add 1 Animal to ANOTHER card and 2 Microbe to ANOTHER card.)
+VP: 1
+
+C10: Floater Leasing
+Cost: 3
+------
+Increase M$ 1/3 Floater
+(Increase your M$ production 1 step per 3 floaters you have.)
+
+C11: Floater Prototypes
+Science tag, Event tag
+Cost: 2
+------
+Gain Floater Floater*
+(Add 2 floaters to ANOTHER card.)
+
+C12: Floater Technology
+Science tag
+Cost: 7
+-> Floater*
+(Action: Add 1 floater to ANOTHER card)
+------
+
+C13: Galilean Waystation
+Space tag
+Cost: 15
+------
+Increase M$ 1/any-Jovian tag
+(Increase your M$ production 1 step for every Jovian[/BGCOLOR] tag in play.)
+VP: 1
+
+C14: Heavy Taxation
+Earth tag
+Cost: 3
+Requires: Earth Earth
+------
+Increase M$ 2
+Gain 4 M$
+(Requires 2 Earth tags. Increase your M$ production 2 steps, and gain 4 M$.)
+VP: -1
+
+C15: Ice Moon Colony
+Space tag
+Cost: 23
+------
+Colony
+Ocean
+(Place 1 colony and 1 ocean tile.)
+
+C16: Impactor Swarm
+Space tag, Event tag
+Cost: 11
+Requires: Jovian Jovian
+------
+Gain 12 Heat
+- any-Plant any-Plant
+(Requires 2 Jovian tags. Gain 12 heat. Remove up to 2 plants from any player.)
+
+C17: Interplanetary Colony Ship
+Earth tag, Space tag, Event tag
+Cost: 12
+------
+Colony
+(Place a colony.)
+
+C18: Jovian Lanterns
+Jovian tag
+Cost: 20
+Requires: Jovian
+Titanium -> Floater Floater
+(Action: Spend 1 titanium to add 2 floates here.)
+------
+TR
+Gain Floater Floater*
+(Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY card. 1 VP per 2 floaters here.)
+VP: 1/2 Floater
+
+C19: Jupiter Floating Station
+Jovian tag
+Cost: 9
+Requires: Science Science Science
+-> Floater^Jovian
+OR -> Gain 1 M$/Floater* (Max 4)
+(Action: Add 1 floater to a JOVIAN card, or gain 1 M$ for every floater here (MAX 4).)
+------
+VP: 1
+
+C20: Luna Governor
+Earth tag, Earth tag
+Cost: 4
+Requires: Earth Earth Earth
+------
+Increase M$ 2
+(Requires 3 Earth tags. Increase your M$ production 2 steps.)
+
+C21: Lunar Exports
+Space tag, Earth tag
+Cost: 19
+------
+Increase Plant 2 OR Increase M$ 5
+(Increase your plant production 2 steps, or increase your M$ production 5 steps.)
+
+C22: Lunar Mining
+Earth tag
+Cost: 11
+------
+Increase Titanium/2 Earth tag
+(Increase your titanium produciton 1 step for every 2 Earth tags you have in play.)
+
+C23: Market Manipulation
+Earth tag, Event tag
+Cost: 1
+------
+INCREASE ONE COLONY TILE TRACK 1 STEP. DECREASE ANOTHER COLONY TILE TRACK 1 STEP
+
+C24: Martian Zoo
+Animal, Building tag
+Cost: 12
+Requires: City City
+Earth tag: Animal resource
+-> Gain 1 M$/Animal resource
+(Effect: When you play an Earth tag, place an animal here.
+Action: Gain 1 M$ per animal here.)
+------
+(Requires 2 city tiles in play.)
+VP: 1
+
+C25: Mining Colony
+Space tag
+Cost: 20
+------
+Increase Titanium 1
+Colony
+(Increase your titanium production 1 step. Place a colony.)
+
+C26: Minority Refuge
+Space tag
+Cost: 5
+------
+Decrease M$ 2
+Colony
+(Decrease your M$ production 2 steps. Place a colony.)
+
+C27: Molecular Printing
+Science tag
+Cost: 11
+------
+Gain 1 M$/any-City
+Gain 1 M$/any-Colony
+(Gain 1 M$ for each city tile in play. Gain 1 M$ for each colony in play.)
+VP: 1
+
+C28: Nitrogen from Titan
+Jovian tag, Space tag
+Cost: 25
+------
+TR TR
+Gain Floater^Jovian Floater^Jovian
+(Raise your TR 2 steps. Add 2 floaters to another JOVIAN card.)
+VP : 1
+
+C29: Pioneer Settlement
+Space tag
+Cost: 13
+Requires: max 1 Colony
+------
+Decrease M$ 2
+Colony
+(Requires that you have no more than 1 colony. Decrease your M$ production 2 steps. Place a colony.)
+VP: 2
+
+C30: Productive Outpost
+Cost: 0
+------
+GAIN ALL YOUR COLONY BONUSES.
+
+C31: Quantum Communications
+Cost: 8
+Requires: 4 Science
+------
+Increase M$ 1/any-Colony
+(Requires 4 Science tags. Increase your M$ production 1 step for each colony in play.)
+VP: 1
+
+C32: Red Spot Observatory
+Science tag, Jovian tag
+Cost: 17
+Requires: 3 Science
+-> Floater
+OR Floater -> Card
+(Action: Add 1 floater to this card, or spend 1 floater here to draw a card.)
+------
+Card Card
+(Requires 3 science tags. Draw 2 cards.)
+VP: 2
+
+C33: Refugee Camps
+Earth tag
+Cost: 10
+Decrease M$ 1 -> Camp
+(Action: Decrease your M$ production 1 step to add a camp resource to this card.)
+------
+(1 VP for each camp resource on this card.)
+VP: 1/Camp
+
+C34: Research Colony
+Science tag, Space tag
+Cost: 20
+------
+Colony*
+Card Card
+(Place a colony. MAY BE PLACED WHERE YOU ALREADY HAVE A COLONY. Draw 2 cards.)
+
+C35: Rim Freighters
+Space tag
+Cost: 4
+Trade: -1 resource
+(Effect: When you trade, you pay 1 less resource for it.)
+------
+
+C36: Sky Docks
+Earth tag, Space tag
+Cost: 18
+Requires: Earth Earth
+:-1 M$
+(Effect: When you play a card, you pay 1 M$ less for it.)
+------
+Trade Fleet
+(Requires 2 Earth tags. Gain 1 Trade Fleet.)
+VP: 2
+
+C37: Solar Probe
+Science tag, Space tag, Event tag
+Cost: 9
+------
+Card/3 Science tags
+(Draw 1 card for every 3 Science tags you have, including this.)
+VP: 1
+
+C38: Solar Reflectors
+Space tag
+Cost: 23
+------
+Increase Heat 5
+(Increase your heat production 5 steps.)
+
+C39: Space Port
+City tag, Building tag
+Cost: 22
+Requires: Colony
+------
+Trade Fleet
+City Tile
+Decrease Energy 1
+Increase M$ 4
+(Requires 1 colony. Add 1 Trade Fleet. Place a city tile. Decrease your energy production 1 step, and increase your M$ production 4 steps.)
+
+C40: Space Port Colony
+Space tag
+Cost: 27
+Requires: Colony
+------
+Colony*
+Trade Fleet
+(Requires a colony. Place a colony. MAY BE PLACED ON A COLONY TILE WHERE YOU ALREADY HAVE A COLONY. Gain 1 Trade Fleet. 1 VP per 2 colonies in play.)
+VP: 1/2 any-Colony
+
+C41: Spin-Off Department
+Building tag
+Cost: 10
+20 M$*: Card
+(Effect: WHEN PLAYING A CARD WITH A BASIC COST OF 20 M$ OR MORE, draw a card.)
+------
+Increase M$ 2
+(Increase your M$ production 2 steps.)
+
+C42: Sub-Zero Salt Fish
+Animal tag
+Cost: 5
+Requires: -6 C
+-> Animal resource
+------
+Decrease any-Plant 1
+(Requires -6 C or warmer. Decrease any plant production 1 step. 1 VP per 2 animals on this card.)
+VP: 1/2 Animal resource
+
+C43: Titan Air Scrapping
+Jovian tag
+Cost: 21
+Titanium -> Floater Floater
+OR Floater Floater -> TR
+(Action: Spend 1 titanium to add 2 floaters to this card, or spend 2 floaters here to increase your TR 1 step.)
+------
+VP: 2
+
+C44: Titan Floating Launch-Pad
+Jovian tag
+Cost: 18
+-> Floater^Jovian
+OR Floater -> Trade
+(Action: Add 1 floater to ANY JOVIAN CARD, or spend 1 floater here to trade for free.)
+------
+Floater^Jovian Floater^Jovian
+(Add 2 floaters to ANY JOVIAN CARD.)
+VP: 1
+
+C45: Titan Shuttles
+Jovian tag, Space tag
+Cost: 23
+-> Floater^Jovian Floater^Jovian
+OR X Floater -> X Titanium
+(Action: Add 2 floaters to ANY JOVIAN CARD, or spend any number of floaters here to gain the same number of titanium.)
+------
+VP: 1
+
+C46: Trade Envoys
+Cost: 6
+Trade: +1
+(Effect: When you trade, you may first increase that Colony tile track 1 step.)
+------
+
+C47: Trading Colony
+Space tag
+Cost: 18
+Trade: +1
+(Effect: When you trade, you may first increase that Colony tile track 1 step.)
+------
+Colony
+(Place a colony.)
+
+C48: Urban Decomposers
+Microbe tag
+Cost: 6
+Requires: Colony City
+------
+Increase Plant 1
+Microbe Microbe*
+(Requires that you have 1 city tile and 1 colony in play. Increase your plant production 1 step, and add 2 Microbes to ANOTHER card.)
+
+C49: Warp Drive
+Science tag
+Cost: 14
+Requires: 5 Science
+Space tag: -4 M$
+(When you play a space tag, you pay 4 M$ less for it.)
+------
+(Requires that you have 5 science tags.)
+VP: 2 

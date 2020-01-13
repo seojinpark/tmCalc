@@ -1,0 +1,1746 @@
+001: Colonizer Training Camp 
+Jovian tag, Building tag
+Cost: 8 
+Requires: max 5% O2 
+------
+(Oxygen must be 5% or less.) 
+VP: 2 
+
+002:* Asteroid Mining Consortium 
+Jovian tag
+Cost: 13
+Requires: Titanium production 
+------
+Decrease any-Titanium 1
+Increase Titanium 1
+(Requires that you have titanium production. Decrease any titanium production 1 step and increase your own 1 step.) 
+VP: 1
+
+003: Deep Well Heating 
+Power tag, Building tag
+Cost: 13 
+------
+Increase Energy 1 
+TempUp
+(Increase your Energy production 1 step. Increase temperature 1 step.) 
+
+004: Cloud Seeding
+Cost: 11
+Requires: Ocean Ocean Ocean 
+------
+Decrease M$ 1 
+Decrease any-Heat 1 
+Increase Plant 2 
+(Requires 3 ocean tiles. Decrease your M$ production 1 step and any heat production 1 step. Increase your Plant production 2 steps.) 
+
+005: Search for Life 
+Science tag
+Cost: 3
+Requires: max 6% O2 
+1 M$ -> Microbe*: Science Resource 
+(Action: Spend 1 M$ to reveal the top card of the draw deck. If that card has a Microbe tag, add a Science resource here.) 
+------
+(Oxygen must be 6% or less. 3 VPs if you have one or more Science resources here.) 
+VP: Science Resource*: 3
+--- Ed. note: The above text is from the first edition. This has been errated to say "reveal and discard" the top card of the deck, and this error was corrected in later editions. Card text like this and the removal of the insert are the main changes between first edition and second edition. 
+
+006:* Inventors Guild
+Science tag
+Cost: 9 
+-> ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT
+
+007: Martian Rails 
+Building tag
+Cost: 13 
+Energy -> M$/any-City* 
+(Action: Spend 1 Energy to gain 1 M$ for each City tile ON MARS.) 
+
+008: Capital 
+City tag, Building tag
+Cost: 26 
+Requires: 4 Ocean 
+------
+Decrease Energy 2 
+Increase M$ 5 
+Special Tile 
+(Requires 4 ocean tiles. Place this tile. Decrease your Energy production 2 steps and increase your M$ production 5 steps. 1 ADDITIONAL VP FOR EACH OCEAN TILE ADJACENT TO THIS CITY TILE.) 
+VP: 1/Ocean* 
+
+009: Asteroid 
+Space tag, Event tag
+Cost: 14 
+------
+TempUp 
+Titanium Titanium 
+Remove any-Plant 3 
+(Raise temperature 1 step and gain 2 titanium Remove up to 3 Plants from any player.) 
+
+010: Comet
+Space tag, Event tag
+Cost: 21 
+------
+TempUp 
+Ocean Tile 
+Remove any-Plant any-Plant any-Plant 
+(Raise temperature 1 step and place an ocean tile. Remove up to 3 Plants from any player.) 
+
+011: Big Asteroid 
+Space tag, Event tag
+Cost: 27 
+------
+TempUp TempUp 
+Titanium Titanium Titanium Titanium 
+Remove 4 any-Plant 
+(Raise temperature 2 steps and gain 4 titanium. Remove up to 4 Plants from any player.) 
+
+012: Water Import from Europa 
+Jovian tag, Space tag
+Cost: 25 
+12 M$ (Titanium) -> Ocean Tile 
+(Action: Pay 12 M$ to place an ocean tile. TITANIUM MAY BE USED as if playing a Space card.) 
+------
+(1 VP for each Jovian tag you have.) 
+VP: 1/Jovian
+
+013:* Space Elevator
+Space tag, Building tag
+Cost: 27 
+Steel -> 5 M$ 
+(Action: Spend 1 steel to gain 5 M$.) 
+------
+Increase Titanium 1 
+(Increase your titanium production 1 step.) 
+VP: 2 
+
+014:* Development Center 
+Science tag, Building tag
+Cost: 11 
+Energy -> +Card 
+(Action: Spend 1 Energy to draw a card.) 
+
+015: Equatorial Magnetizer
+Building tag
+Cost: 11 
+Decrease Energy 1 -> TR 
+(Action: Decrease your Energy production 1 step to increase your terraform rating 1 step.) 
+
+016: Domed Crater
+City tag, Building tag
+Cost: 24
+Requires: max 7% O2 
+------
+Plant Plant Plant 
+Reduce Energy 1 
+Increase M$ 3
+City Tile 
+(Oxygen must be 7% or less. Gain 3 Plants and place a City tile. Decrease your Energy production 1 step and increase your M$ production 3 steps.)
+VP: 1 
+
+017: Noctis City 
+City tag, Building tag
+Cost: 18 
+------
+Reduce Energy 1 
+Increase M$ 3 
+City Tile* 
+(Decrease your Energy production 1 step and increase your M$ production 3 steps. Place a City ON THE RESERVED AREA, disregarding normal placement restrictions.) 
+
+018: Methane from Titan 
+Jovian tag, Space tag
+Cost: 28 
+Requires: 2% O2 
+------
+Increase Heat 2 
+Increase Plant 2 
+(Requires 2% oxygen. Increase your heat production 2 steps and your Plant production 2 steps.) 
+VP: 2 
+
+019: Imported Hydrogen 
+Earth tag, Space tag, Event tag
+Cost: 16 
+------
+3 Plants OR 3 Microbe* Resource OR 2 Animal* resource 
+Ocean Tile 
+(Gain 3 Plants, or add 3 Microbes or 2 Animals to ANOTHER card. Place an ocean tile.) 
+
+020: Research Outpost
+Science tag, City tag, Building tag 
+Cost: 18 
+: -M$ 1 
+(Effect: When you play a card, you pay 1 M$ less for it.) 
+------
+City Tile* 
+(Place a ciy tile NEXT TO NO OTHER TILE.) 
+--- Ed. note: "ciy" is original to the card. 
+
+021: Phobos Space Haven 
+Space tag, City tag
+Cost: 25 
+------
+Increase Titanium 1 
+City Tile* 
+(Increase your titanium production 1 step and place a City tile ON THE RESERVED AREA.) 
+VP: 3 
+
+022: Black Polar Dust 
+Cost: 15 
+------
+Decrease M$ 2 
+Increase Heat 3 
+Ocean Tile
+(Place an ocean tile. Decrease your M$ production 2 steps and increase your heat production 3 steps.) 
+
+023: Arctic Algae 
+Plant tag
+Cost: 12 
+Requires: max -12 C 
+any-Ocean Tile: Plant Plant 
+(Effect: When anyone places an ocean tile, gain 2 Plants.) 
+------
+Gain Plant 1 
+(It must be -12 C or colder to play. Gain 1 Plant.) 
+
+024: Predators 
+Animal tag
+Cost: 14 
+Requires: 11% O2 
+any-Animal Resource -> Animal Resource 
+(Action: Remove 1 Animal from any card and add it to this card.) 
+------
+(Requires 11% oxygen. 1 VP per Animal on this card.) 
+VP: 1/Animal
+
+025:* Space Station 
+Space tag
+Cost: 10 
+Space: -2 M$ 
+(When you play a Space card, you pay 2 M$ less for it.) 
+------
+VP: 1 
+
+026: Eos Chasma National Park 
+Plant tag, Building tag
+Cost: 16 
+Requires: -12 C 
+------
+Animal* Resource
+Plant Plant Plant 
+Increase M$ 2 
+(Requires -12 C or warmer. Add 1 Animal TO ANY ANIMAL CARD. Gain 3 Plants. Increase your M$ production 2 steps.) 
+VP: 1 
+
+027:* Interstellar Colony Ship 
+Earth tag, Space tag, Event tag
+Cost: 24
+Requires: 5 Science 
+------
+(Requires 5 Science tags.) 
+VP: 4 
+
+028:* Security Fleet
+Space tag
+Cost: 12 
+Titanium -> Fighter Resource 
+(Action: Spend 1 titanium to add 1 fighter resource to this card.) 
+------
+(1 VP for each fighter resource on this card.) 
+VP: 1/Fighter Resource 
+
+029: Cupola City 
+City tag, Building tag
+Cost: 16
+Requires: max 9% O2 
+------
+Reduce Energy 1 
+Increase M$ 3
+City Tile 
+(Oxygen must be 9% or less. Place a City tile. Decrease your Energy production 1 step and increase your M$ production 3 steps.)
+
+030: Lunar Beam 
+Earth tag, Power tag
+Cost: 13 
+------
+Decrease M$ 2 
+Increase Heat 2 
+Increase Energy 2 
+(Decrease your M$ production 2 steps and increase your heat production and Energy production 2 steps each.) 
+
+031: Optimal Aerobraking 
+Space tag
+Cost: 7 
+Space Event: 3 M$ Heat Heat Heat 
+(Effect: When you play a Space Event, you gain 3 M$ and 3 heat.) 
+
+032: Underground City 
+City tag, Building tag
+Cost: 18 
+------
+Decrease Energy 2 
+Increase Steel 2 
+City Tile
+(Place a City tile. Decrease your Energy production 2 steps and increase your steel production 2 steps.) 
+
+033: Regolith Eaters
+Science tag, Microbe tag
+Cost: 13
+-> Microbe
+OR Microbe Microbe -> O2
+(Action: Add 1 Microbe to this card, or remove 2 Microbes from this card to raise oxygen level 1 step.) 
+
+034: GHG Producing Bacteria 
+Science tag, Microbe tag
+Cost: 8 
+Requires: 4% O2 
+-> Microbe Resource 
+OR Microbe Resource Microbe Resource -> TempUp
+(Action: Add 1 Microbe to this card, or remove 2 Microbes to raise temperature 1 step.) 
+------
+(Requires 4% oxygen.) 
+
+035: Ants
+Microbe tag
+Cost: 9 
+Requires: 4% O2 
+any-Microbe Resource -> Microbe Resource 
+(Action: Remove 1 Microbe from any card to add 1 to this card.) 
+------
+(Requires 4% oxygen. 1 VP per 2 Microbes on this card.) 
+VP: 1/2 Microbe Resource
+
+036: Release of Inert Gases 
+Event tag
+Cost: 14 
+------
+TR TR
+(Raise your terraform rating 2 steps.) 
+
+037: Nitrogen-Rich Asteroid 
+Space tag, Event tag
+Cost: 31 
+------
+Increase Plant 1 OR 
+If 3 Plant tags: Increase Plant 4 
+TR TR
+TempUp
+(Raise your terraforming rating 2 steps and temperature 1 step. Increase your Plant production 1 step, or 4 steps if you have 3 Plant tags.) 
+
+038: Rover Construction 
+Building tag 
+Cost: 8 
+any-City: 2 
+(Effect: When any City tile is placed, gain 2 M$.) 
+------
+VP: 1 
+
+039: Deimos Down 
+Space tag, Event tag 
+Cost: 31
+------
+TempUp TempUp TempUp 
+Gain Steel 4 
+Remove any-Plant 8 
+(Raise temperature 3 steps and gain 4 steel. Remove up to 8 Plants from any player.) 
+
+040: Asteroid Mining
+Jovian tag, Space tag
+Cost: 30 
+------
+Increase Titanium 2 
+(Increase your titanium production 2 steps.) 
+VP: 2 
+
+041: Food Factory 
+Building tag
+Cost: 12 
+------
+Decrease Plant
+Increase M$ 4 
+(Decrease your Plant production 1 step and increase your M$ production 4 steps.) 
+VP: 1
+
+042: Archaebacteria 
+Microbe tag
+Cost: 6 
+Requires: max -18 C
+------ 
+Increase Plant 1 
+(It must be -18 C or colder. Increase your Plant production 1 step.) 
+
+043: Carbonate Processing 
+Building tag 
+Cost: 6
+------
+Decrease Energy 1 
+Increase Heat 3 
+(Decrease your Energy production 1 step and increase your heat production 3 steps.) 
+
+044: Natural Preserve 
+Science tag, Building tag 
+Cost: 9 
+Requires: max 4% O2 
+------
+Special Tile* 
+Increase M$ 1 
+(Oxygen must be 4% or less. Place this tile NEXT TO NO OTHER TILE. Increase your M$ production 1 step.) 
+VP: 1 
+
+045: Nuclear Power 
+Power tag, Building tag 
+Cost: 10 
+------
+Decrease M$ 2 
+Increase Energy 3
+(Decrease your M$ production 2 steps and increase your Energy production 3 steps.) 
+
+046:* Lightning Harvest
+Power tag 
+Cost: 8
+Requires: Science Science Science
+------
+Increase Energy 1.
+Increase M$ 1. 
+(Requires 3 Science tags. Increase your Energy production and your M$ production up one step each.) 
+VP: 1 
+
+047: Algae 
+Plant tag 
+Cost: 10 
+Requires: 5 Ocean
+------
+Gain Plant 1
+Increase Plant 2 
+(Requires 5 ocean tiles. Gain 1 Plant and increase your Plant production 2 steps.) 
+
+048: Adapted Lichen
+Plant tag
+Cost: 9 
+------
+Increase Plant 1 
+(Increase your Plant production 1 step.) 
+
+049:* Tardigrades 
+Microbe tag
+Cost: 4 
+-> Microbe Resource
+(Action: Add 1 Microbe to this card.)
+------
+(1 VP per 4 Microbes on this card.) 
+VP: 1/4 Microbe Resource) 
+
+050:* Virus 
+Microbe tag, Event tag 
+Cost: 1 
+------
+Remove 2 any-Animal OR -5 any-Plant 
+(Remove up to 2 Animals or 5 Plants from any player.) 
+
+051:* Miranda Resort 
+Jovian tag, Space tag 
+Cost: 12 
+------
+Increase M$/Earth 
+(Increase your M$ production 1 step for each Earth tag you have.) 
+VP: 1 
+
+052: Fish 
+Animal tag 
+Cost: 9 
+Requires: +2 C 
+-> Animal Resource 
+(Action: Add 1 Animal to this card.) 
+------
+Reduce any-Plant 1 
+(Requires +2 C or warmer. Decrease any Plant production 1 step. 1 VP for each Animal on this card.) 
+VP: 1/Animal Resource 
+
+053: Lake Marineris 
+Cost: 18 
+Requires: 0 C 
+------
+Ocean Tile Ocean Tile 
+(Requires 0 C or warmer. Place 2 ocean tiles.) 
+VP: 2 
+
+054: Small Animals 
+Animal tag
+Cost: 6 
+Requires: 6% O2 
+-> Animal Resource 
+(Action: Add 1 Animal to this card.) 
+------
+Decrease any-Plant 1 
+(Requires 6% oxygen. Decrease any Plant production 1 step. 1 VP per 2 Animals on this card.) 
+VP: 1/2 Animal Resource 
+
+055: Kelp Farming 
+Plant tag 
+Cost: 17 
+Requires: 6 Ocean 
+------
+Increase M$ 2 
+Increase Plant 3 
+Gain Plant 2 
+(Requires 6 ocean tiles. Increase your M$ production 2 steps and your Plant production 3 steps. Gain 2 Plants.) 
+VP: 1 
+
+056:* Mine 
+Building tag 
+Cost: 4
+------
+Increase Steel 1 
+(Increase your steel production 1 step.) 
+
+057:* Vesta Shipyard 
+Jovian tag, Space tag
+Cost: 15
+------
+Increase Titanium 1 
+(Increase your titanium production 1 step.) 
+VP: 1 
+
+058: Beam from a Thorium Asteroid 
+Jovian tag, Space tag, Power tag 
+Cost: 32 
+Requires: Jovian 
+------
+Increase Heat 3 
+Increase Energy 3
+(Requires a Jovian tag. Increase your heat production and Energy production 3 steps each.) 
+VP: 1 
+
+059: Mangrove 
+Plant tag 
+Cost: 12 
+Requires: +4 C 
+------
+Greenery Tile* 
+(Requires +4 C or warmer. Place a greenery tile ON AN AREA RESERVED FOR OCEAN and raise oxygen 1 step. Disregard normal placement restrictions for this.) 
+VP: 1
+
+060: Trees
+Plant tag
+Cost: 13 
+Requires: -4 C 
+------
+Increase Plant 3 
+Gain Plant 1 
+(Requires -4 C or warmer. Increase your Plant production 3 steps. Gain 1 Plant.) 
+VP: 1 
+
+061:* Great Escarpment Consortium 
+Cost: 6 
+Requires: Steel Production
+------
+Decrease any-Steel 1
+Increase Steel 
+(Requires that you have steel production. Decrease any steel production 1 step and increase your own 1 step.) 
+
+062:* Mineral Deposit
+Event tag 
+Cost: 5
+------
+Gain 5 Steel
+(Gain 5 Steel) 
+
+063: Mining Expedition
+Event tag 
+Cost: 12 
+------
+O2 
+Remove any-Plant any-Plant 
+Gain Steel Steel 
+(Raise Oxygen 1 step. Remove 2 Plants from any player. Gain 2 steel.) 
+
+064:* Mining Area 
+Building tag
+Cost: 4 
+------
+Special Tile* 
+[Increase Steel 1 OR Titanium 1]*
+(Place this tile on an area with a steel or titanium placement bonus, adjacent to another of your tiles. Increase your production of that resource 1 step.) 
+
+065:* Building Industries 
+Building tag
+Cost: 6 
+------
+Decrease Energy 1
+Increase Steel 2 
+(Decrease your Energy production 1 step and increase your steel production 2 steps.) 
+
+066:* Land Claim 
+Event tag 
+Cost: 1
+------
+PLACE YOUR MARKER ON A NON-RESERVED AREA. ONLY YOU MAY PLACE A TILE HERE. 
+
+067: Mining Rights 
+Building tag 
+Cost: 9 
+------
+Special Tile* 
+Increase Steel 1 or Titanium 1 
+(Place this tile on an area with a steel or titanium placement bonus. Increase that production 1 step.) 
+
+068:* Sponsors 
+Earth tag
+Cost: 6 
+------
+Increase M$ 2 
+(Increase your M$ production 2 steps.) 
+
+069:* Electro Catapult 
+Building tag 
+Cost: 17
+Requires: max 8% O2 
+Plant/Steel -> 7 M$ 
+(Action: Spend 1 Plant or 1 steel to gain 7 M$.) 
+------
+Decrease Energy 1 
+(Oxygen must be 8% or less. Decrease your Energy production 1 step.) 
+VP: 1 
+
+070:* Earth Catapult
+Earth tag
+Cost: 23 
+:-2 M$
+Effect: When you play a card, you pay 2 M$ less for it. 
+------
+VP: 2
+
+071:* Advanced Alloys 
+Science tag
+Cost: 9 
+Titanium: +1 M$ 
+Steel: +1M$ 
+(Effect: Each titanium you have is worth 1 M$ extra. Each steel you have is worth 1 M$ extra.) 
+
+072: Birds
+Animal tag
+Cost: 10 
+Requires: 13% O2
+-> Animal Resource
+(Action: Add an Animal to this card.) 
+------
+Decrease any-Plant 2 
+(Requires 13% oxygen. Decrease any Plant production 2 steps. 1 VP for each Animal on this card.) 
+VP: 1/Animal 
+
+073:* Mars University 
+Science tag, Building tag
+Cost: 8
+Science: -Card +Card 
+Effect: When you play a Science tag, including this, you may discard a card from hand to draw a card. 
+------
+VP: 1 
+
+074:* Viral Enhancers 
+Science tag, Microbe tag 
+Cost: 9 
+Plant/Microbe/Animal:Plant/Microbe*/Animal* 
+(Effect: When you play a Plant, Microbe, or an Animal tag, including this, gain 1 Plant or add 1 resource TO THAT CARD.) 
+
+075: Towing a Comet 
+Space tag, Event tag 
+Cost: 23 
+------
+Plant Plant
+O2
+Ocean Tile 
+(Gain 2 Plants. Raise oxygen level 1 step and place an ocean tile.) 
+
+076: Space Mirrors 
+Power tag, Space tag 
+Cost: 3
+7 M$ -> Increase Energy 1 
+(Action: Spend 7 M$ to increase your Energy production 1 step.) 
+
+077: Solar Wind Power 
+Science tag, Space tag, Power tag 
+Cost: 11 
+------
+Increase Power 1 
+Titanium Titanium
+(Increase your Energy production 1 step and gain 2 titanium.) 
+
+078: Ice Asteroid 
+Space tag, Event tag 
+Cost: 23 
+------
+Ocean Tile Ocean Tile
+(Place 2 ocean tiles.) 
+
+079:* Quantum Extractor 
+Science tag, Power tag 
+Cost: 13
+Requires: 4 Science
+Space: -2 M$ 
+(Effect: When you play a Space card, you pay 2 M$ less for it.) 
+------
+Increase Energy 4
+(Requires 4 Science tags. Increase your Energy production 4 steps.) 
+
+080: Giant Ice Asteroid 
+Space tag, Event tag 
+Cost: 36 
+------
+TempUp TempUp 
+Ocean Tile Ocean Tile
+Remove any-Plant 6 
+(Raise temperature 2 steps and place 2 ocean tiles. Remove up to 6 Plants from any player.) 
+
+081: Ganymede Colony 
+Jovian tag, Space tag, City tag 
+Cost: 20 
+------
+City Tile* 
+(Place a City tile ON THE RESERVED AREA. 1 VP per Jovian tag you have.)
+VP: 1/Jovian 
+
+082:* Callisto Penal Mines 
+Jovian tag, Space tag
+Cost: 24 
+------
+Increase M$ 3 
+(Increase your M$ production 3 steps.) 
+VP: 2 
+
+083: Giant Space Mirror
+Power tag, Space tag
+Cost: 17 
+------
+Increase Energy 3
+(Increase your Energy production 3 steps.) 
+
+084:* Trans-Neptune Probe
+Science tag, Space tag
+Cost: 6 
+------
+VP: 1 
+
+085:* Commercial District 
+Building tag
+Cost: 16 
+------
+Decrease Energy 1 
+Increase M$ 4 
+Special Tile
+(Decrease your Energy production 1 step and increase your M$ production 4 steps. Place this tile. 1 VP PER ADJACENT CITY TILE.) 
+VP: 1/City*
+
+086:* Robotic Workforce 
+Science tag
+Cost: 9
+------
+COPY A Building.
+(Duplicate only the production box of one of your Building cards.) 
+
+087: Grass
+Plant tag
+Cost: 11
+Requires: -16 C 
+------
+Increase Plant 1
+Plant Plant Plant
+(Requires -16 C or warmer. Increase your Plant production 1 step. Gain 3 Plants.) 
+
+088: Heather 
+Plant tag 
+Cost: 6 
+Requires: -14 C 
+------
+Increase Plant 1 
+Gain Plant 
+(Requires -14 C or warmer. Increase your Plant production 1 step. Gain 1 Plant.) 
+
+089: Peroxide Power 
+Power tag, Building tag
+Cost: 7 
+------
+Decrease M$ 1 
+Increase Energy 2 
+(Decrease your M$ production 1 step and increase your Energy production 2 steps.) 
+
+090:* Research
+Science tag, Science tag 
+Cost: 11 
+------
++Card +Card
+(Counts as playing 2 Science cards. Draw 2 cards.) 
+VP: 1
+
+091:* Gene Repair 
+Science tag 
+Cost: 12 
+Requires: Science Science Science 
+------
+Increase M$ 2 
+(Requires 3 Science tags. Increase your M$ production 2 steps.) 
+VP: 2 
+
+092:* Io Mining Industries 
+Jovian tag, Space tag 
+Cost: 41 
+------
+Increase Titanium 2 
+Increase M$ 2 
+(Increase your titanium production 2 steps and your M$ production 2 steps. 1 VP per Jovian tag you have.) 
+1/Jovian
+
+093: Bushes
+Plant tag
+Cost: 10 
+Requires: -10 C 
+------
+Increase Plant 2 
+Gain Plant 2 
+(Requires -10 C or warmer. Increase your Plant production 2 steps. Gain 2 Plants.) 
+
+094:* Mass Converter 
+Science tag, Power tag 
+Cost: 8 
+Requires: 5 Science 
+Space: -M$ 
+(Effect: When you play a Space card, you pay 2 M$ less for it.) 
+------
+Increase Energy 6 
+(Requires 5 Science tags. Increase your Energy production 6 steps.) 
+
+095:* Physics Complex 
+Science tag, Building tag 
+Cost: 12 
+6 Energy -> Science Resource
+(Action: Spend 6 Energy to add a Science resource to this card.) 
+------
+(2 VP for each Science resource on this card.) 
+VP: 2/Science Resource
+
+096: Greenhouses
+Plant tag, Building tag
+Cost: 6 
+------
+Plant/any-City 
+(Gain 1 Plant for each City tile in play.) 
+
+097: Nuclear Zone
+Earth tag 
+Cost: 10 
+------
+Special Tile
+TempUp TempUp
+(Place this tile and raise temperature 2 steps.) 
+VP: -2 
+
+098:* Tropical Resort 
+Building tag
+Cost: 13
+------
+Reduce Heat 2.
+Increase M$ 3.
+(Reduce your heat production 2 steps and increase your M$ production 3 steps.) 
+VP: 2 
+
+099:* Toll Station 
+Space tag
+Cost: 12
+------
+Increase 1 M$/Space* 
+(Increase your M$ production 1 step for each Space tag OPPONENTS have.) 
+
+100: Fueled Generators
+Power tag, Building tag 
+Cost: 1 
+------
+Decrease M$ 1
+Increase Energy 1 
+(Decrease your M$ production 1 step and increase your Energy production 1 step.) 
+
+101: Ironworks 
+Building tag
+Cost: 11 
+4 Energy -> Steel O2 
+(Action Spend 4 Energy to gain 1 steel and increase oxygen 1 step.) 
+
+102: Power Grid 
+Power tag
+Cost: 18 
+------
+Increase Power/Power tag
+(Increase your Energy production step for each Power tag you have, including this.) 
+
+103: Steelworks 
+Building tag
+Cost: 15
+4 Energy -> Steel Steel O2 
+(Action: Spend 4 Energy to gain 2 steel and increase oxygen 1 step.) 
+
+104: Ore Processor 
+Building tag
+Cost: 13
+4 Energy -> Titanium O2 
+(Action: Spend 4 Energy to gain 1 titanium and increase oxygen 1 step.) 
+
+105:* Earth Office 
+Earth tag 
+Cost: 1 
+Earth: -3 M$ 
+(Effect: When you play an Earth tag, you pay 3 M$ less for it.) 
+
+106:* Acquired Company 
+Earth tag
+Cost: 10 
+------
+Increase M$ 3
+(Increase your M$ production 3 steps.)
+
+107:* Media Archives
+Earth tag
+Cost: 8 
+------
+1 M$/Event*
+(Gain 1 M$ for each Event EVER PLAYED by all players.)
+
+108: Open City
+City tag, Building tag
+Cost: 23 
+Requires: 12% O2 
+------
+Decrease Energy 1 
+Increase M$ 4 
+Plant Plant 
+City Tile 
+(Requires 12% oxygen. Decrease your Energy production 1 step and increase your M$ production 4 steps. Gain 2 Plants and place a City tile.) 
+VP: 1 
+
+109:* Media Group 
+Earth tag
+Cost: 6 
+Event: 3 M$ 
+(Effect: After you play an Event card, you gain 3 M$.) 
+
+110:* Business Network 
+Earth tag
+Cost: 4
+-> ACTION: LOOK AT THE TOP CARD AND EITHER BUY IT OR DISCARD IT
+------
+Decrease M$ 1 
+(Decrease your M$ production 1 step.) 
+
+111:* Business Contacts
+Earth tag, Event tag 
+Cost: 7 
+------
+LOOK AT THE TOP 4 CARDS FROM THE DECK. TAKE 2 OF THEM INTO HAND AND DISCARD THE OTHER 2 
+
+112:* Bribed Committee 
+Earth tag, Event tag 
+Cost: 7
+------
+TR TR 
+(Raise your terraform rating 2 steps.) 
+VP: -2
+
+113: Solar Power
+Power tag, Building tag
+Cost: 11 
+------
+Increase Energy 1 
+(Increase your Energy production 1 step.) 
+VP: 1 
+
+114: Breathing Filters 
+Science tag 
+Cost: 11 
+Requires: 7% O2 
+------
+(Requires 7% oxygen.) 
+VP: 2 
+
+115: Artificial Photosynthesis 
+Science tag 
+Cost: 12 
+------
+Increase Plant 1 OR Energy 2 
+(Increase your Plant production 1 step or your Energy production 2 steps.) 
+
+116: Artificial Lake
+Building tag
+Cost: 15 
+Requires: -6 C 
+------
+Ocean Tile* 
+(Requires -6 C or warmer. Place 1 ocean tile ON AN AREA NOT RESERVED FOR OCEAN.) 
+VP: 1 
+
+117: Geothermal Power 
+Power tag, Building tag 
+Cost: 11 
+------
+Increase Energy 2 
+(Increase your Energy production 2 steps.) 
+
+118: Farming
+Plant tag
+Cost: 16 
+Requires: +4 C 
+------
+Increase M$ 2
+Increase Plant 2 
+Gain Plant 2 
+(Requires 4 C or warmer. Increase your M$ production 2 steps and your Plant production 2 steps. Gain 2 Plants.) 
+VP: 2 
+
+119: Dust Seals
+Cost: 2
+Requires: max 3 Ocean 
+------
+(Requires 3 or less ocean tiles.) 
+VP: 1 
+
+120: Urbanized Area 
+City tag, Building tag 
+Cost: 10 
+------
+Decrease Energy 1 
+Increase M$ 2 
+City Tile* 
+(Decrease your Energy production 1 step and increase your M$ production 2 steps. Place a City tile ADJACENT TO AT LEAST 2 OTHER CITY TILES.) 
+
+121:* Sabotage
+Event tag 
+Cost: 1 
+------
+-3 any-Titanium OR -4 any-Steel OR -7 any-M$ 
+(Remove up to 3 Titanium from any player, or 4 steel, or 7 M$.)
+
+122: Moss 
+Plant tag 
+Cost: 4 
+Ocean Ocean Ocean 
+------
+Lose Plant 1 
+Increase Plant 1 
+(Requires 3 ocean tiles and that you lose 1 Plant. Increase your Plant production 1 step.) 
+
+123:* Industrial Center
+Building tag 
+Cost: 4 
+7 M$ -> Steel production
+(Action: Spend 7 M$ to increase your steel production 1 step.) 
+------
+Special Tile*
+(Place this tile ADJACENT TO A CITY TILE.) 
+
+124:* Hired Raiders
+Event tag 
+Cost: 1
+------
+STEAL 2 any-Steel 
+OR STEAL 3 any-M$ 
+(Steal up to 2 steal, or 3 M$ from any player.) 
+
+125:* Hackers 
+Cost: 3
+------
+Decrease Energy 1 
+Decrease any-M$ 2 
+Increase M$ 2 
+(Decrease your Energy production 1 step and any M$ production 2 steps. Increase your M$ production 2 steps.) 
+VP: -1 
+
+126: GHG Factories
+Building tag
+Cost: 11 
+------
+Decrease Energy 1 
+Increase Heat 4 
+(Decrease your Energy production 1 step and increase your heat production 4 steps.) 
+
+127: Subterranean Reservoir
+Event tag
+Cost: 11
+------
+Ocean Tile
+(Place 1 ocean tile.) 
+
+128: Ecological Zone 
+Animal tag, Plant tag 
+Cost: 12
+Requires: Greenery Tile
+Animal/Plant: Animal Resource 
+(Effect: When you play an Animal or Plant tag (including these 2), add an Animal to this card.) 
+------
+Special Tile* 
+(Requires that you have a greenery tile. Place this tile adjacent to any greenery tile. 1 VP per 2 Animals on this card.) 
+VP: 1/2 Animal Resource
+
+129: Zeppelins 
+Cost: 13 
+Requires: 5% O2 
+------
+Increase M$/any-City* 
+(Requires 5% oxygen. Increase your M$ production 1 step for each City tile ON MARS.) 
+VP: 1 
+
+130: Worms 
+Microbe tag
+Cost: 8 
+Requires: 4% O2 
+------
+Increase Plant/2 Microbe tags
+(Requires 4% oxygen. Increase your Plant production 1 step for every 2 Microbe tags you have, including this.) 
+
+131: Decomposers
+Microbe tag 
+Cost: 5
+Requires: 3% O2
+Animal/Plant/Microbe: Microbe Resource 
+(Effect: When you play an Animal, Plant, or Microbe tag, including this, add a Microbe to this card.) 
+------
+(Requires 3% oxygen. 1 VP per 3 Microbes on this card.) 
+VP: 1/3 Microbe Resource
+
+132: Fusion Power
+Science tag, Power tag, Building tag 
+Cost: 14 
+Requires: Power Power 
+------
+Increase Energy 3 
+(Requires 2 Power tags. Increase your Energy production 3 steps.) 
+
+133: Symbiotic Fungus
+Microbe tag
+Cost: 4 
+Requires: -14 C 
+-> Microbe* Resource 
+(Action: Add a Microbe to ANOTHER card.) 
+------
+(Requires -14 C or warmer.) 
+
+134: Extreme-Cold Fungus
+Microbe tag
+Cost: 13 
+Requires: max -10 C
+-> Plant
+OR -> Microbe Microbe*
+(Action: Gain 1 Plant or add 2 Microbes to ANOTHER card.)
+------
+(It must be -10 C or colder.) 
+
+135: Advanced Ecosystems 
+Plant tag, Microbe tag, Animal tag
+Cost: 11
+Requires: Plant Microbe Animal 
+------
+(Requires a Plant tag, a Microbe tag, and an Animal tag.) 
+VP: 3 
+
+136: Great Dam 
+Power tag, Building tag
+Cost: 12 
+Requires: 4 Ocean 
+------
+Increase Energy 2 
+(Requires 4 ocean tiles. Increase your Energy production 2 steps.) 
+VP: 1 
+
+137:* Cartel 
+Earth tag
+Cost: 8 
+------
+Increase M$ 1/Earth 
+(Increase your M$ production 1 step for each Earth tag you have, including this.) 
+
+138: Strip Mine
+Building tag
+Cost: 25
+------
+Decrease Energy 2 
+Increase Steel 2 
+Increase Titanium 1 
+O2 O2
+(Decrease your Energy production 2 steps. Increase your steel production 2 steps and your titanium production 1 step. Raise oxygen 2 steps.) 
+
+139: Wave Power 
+Power tag
+Cost: 8
+Requires: Ocean Ocean Ocean 
+------
+Increase Energy 1 
+(Requires 3 ocean tiles. Increase your Energy production 1 step.) 
+VP: 1 
+
+140: Lava Flows
+Event tag
+Cost: 18 
+------
+TempUp TempUp
+Special Tile* 
+(Raise temperature 2 steps and place this tile ON EITHER THARSIS THOLUS, ASCRAEUS MONS, PAVONIS MONS OR ARSIA MONS.) 
+
+141: Power Plant 
+Power tag, Building tag
+Cost: 4 
+------
+Increase Energy 1 
+(Increase your Energy production 1 step.) 
+
+142: Mohole Area
+Building tag 
+Cost: 20 
+------
+Increase Heat 4
+Special Tile* 
+(Increase your heat production 4 steps. Place this tile ON AN AREA RESERVED FOR OCEAN.) 
+
+143: Large Convoy 
+Earth tag, Space tag, Event tag 
+Cost: 36 
+------
+Ocean Tile 
++Card +Card
+5 Plant/4 Animal* Resource 
+(Place an ocean tile and draw 2 cards. Gain 5 Plants or add 4 Animals to ANOTHER card.) 
+VP: 2 
+
+144:* Titanium Mine 
+Building tag
+Cost: 7 
+------
+Increase Titanium 1 
+(Increase your titanium production 1 step.) 
+
+145: Tectonic Stress Power 
+Power tag, Building tag 
+Cost: 18 
+Requires: Science Science 
+------
+Increase Energy 3 
+(Requires 2 Science tags. Increase your Energy production 3 steps.) 
+VP: 1 
+
+146: Nitrophilic Moss 
+Plant tag 
+Cost: 8 
+Requires: Ocean Ocean Ocean
+------
+Lose Plant 2
+Increase Plant 2 
+(Requires 3 ocean tiles and that you lose 2 Plants. Increase your Plant production 2 steps.) 
+
+147: Herbivores
+Animal tag 
+Cost: 12
+Requires: 8% O2 
+Plantation: Animal Resource 
+(Effect: When you place a greenery tile, add an Animal to this card.) 
+------
+Animal Resource 
+Decrease any-Plant 1
+(Requires 8% oxygen. Add 1 Animal to this card. Decrease any Plant production 1 step. 1 VP per 2 Animals on this card.) 
+VP: 1/2 Animal Resource 
+
+148: Insects 
+Microbe tag
+Cost: 9 
+Requires 6% O2 
+------
+Increase Plant/Plant tag
+(Requires 6% oxygen. Increase your Plant production 1 step for each Plant tag you have.) 
+
+149:* CEO's Favorite Project
+Event tag 
+Cost: 1 
+------
+ADD 1 RESOURCE TO A CARD WITH AT LEAST 1 RESOURCE ON IT
+
+150:* Anti-Gravity Technology 
+Science tag
+Cost: 14
+Requires: 7 Science 
+:-2 M$ 
+(Effect: When you play a card, you pay 2 M$ less for it.) 
+------
+(Requires 7 Science tags.) 
+VP: 3 
+
+151:* Investment Loan
+Earth tag, Event tag 
+Cost: 3
+------
+Reduce M$ 1. 
++M$10
+(Decrease your M$ production 1 step. Gain 10 M$.) 
+
+152: Insulation
+Cost: 2 
+------
+Decrease Heat X 
+Increase M$ X 
+(Decrease your heat production any number of steps and increase your M$ production the same number of steps.) 
+
+153: Adaptation Technology 
+Science tag
+Cost: 12 
+Requirements: O2/Ocean/Temp: +/- 2 
+(Effect: Your global requirements are +2 or -2 steps, your choice in each case.) 
+VP: 1 
+
+154:* Caretaker Contract
+Cost: 3 
+Requires: 0 C
+8 Heat -> TR 
+(Action: Spend 8 heat to increase your terraform rating 1 step.) 
+------
+(Requires 0 C or warmer.) 
+
+155: Designed Microorganisms 
+Science tag, Microbe tag 
+Cost: 16 
+Requires: max -14 C 
+------
+Increase Plant 2 
+(It must be -14 C or colder. Increase your Plant production 2 steps.) 
+
+156:* Standard Technology 
+Science tag
+Cost: 6 
+Standard Projects: 3 M$ 
+(Effect: After you pay for a standard project, except selling patents, you gain 3 M$.) 
+
+157: Nitrite Reducing Bacteria 
+Microbe tag
+Cost: 11
+-> Microbe Resource
+OR 3 Microbe Resource -> TR 
+(Action: Add 1 Microbe to this card, or remove 3 Microbes to increase your TR 1 step. 
+------
+Microbe Microbe Microbe (Add 3 Microbes to this card.) 
+
+158: Industrial Microbes
+Microbe tag, Building tag
+Cost: 12 
+------
+Increase Energy 1 
+Increase Steel 1 
+(Increase your Energy production and your steel production 1 step each.) 
+
+159: Lichen
+Plant tag
+Cost: 7 
+Requires: -24 C 
+------
+Increase Plant 1 
+(Requires -24 C or warmer. Increase your Plant production 1 step.) 
+
+160:* Power Supply Consortium 
+Power tag
+Cost: 5 
+Requires: Power Power 
+------
+Decrease any-Energy 1 
+Increase Energy 1 
+(Requires 2 Power tags. Decrease any Energy production 1 step and increase your own 1 step.)
+
+161: Convoy from Europa 
+Space tag, Event tag 
+Cost: 15 
+------
+Ocean Tile
++Card 
+(Place 1 ocean tile and draw 1 card.) 
+
+162: Imported GHG
+Earth tag, Space tag, Event tag 
+Cost: 7 
+------
+Increase Heat 1 
+Gain Heat Heat Heat 
+(Increase your heat production 1 step and gain 3 heat.) 
+
+163: Imported Nitrogen 
+Earth tag, Space tag, Event tag 
+Cost: 23 
+------
+TR 
+Gain Plant 4
+Gain Microbe* 3
+Gain Animal* 2 
+(Raise your TR 1 step and gain 4 Plants. Add 3 Microbes to ANOTHER card and 2 Animals to ANOTHER card.) 
+
+164: Micro-Mills 
+Cost: 3 
+------
+Increase Heat 1 
+(Increase your heat production 1 step.) 
+
+165: Magnetic Field Generators 
+Building tag 
+Cost: 20 
+------
+Decrease Energy 4
+Increase Plant 2 
+3 TR 
+(Decrease your Energy production 4 steps and increase your Plant production 2 steps. Raise your TR 3 steps.) 
+
+166: Shuttles
+Space tag
+Cost: 10 
+Requires: 5% O2 
+Space: -2 M$ 
+(Effect: When you play a Space card, you pay 2 M$ less for it.) 
+------
+Decrease Energy 1 
+Increase M$ 2 
+(Requires 5% oxygen. Decrease your Energy production 1 step and increase your M$ production 2 steps.) 
+VP: 1 
+
+167: Import of Advanced GHG 
+Earth tag, Space tag, Event tag 
+Cost: 9 
+------
+Increase Heat 2 
+(Increase your heat production 2 steps.) 
+
+168: Windmills
+Power tag, Building tag 
+Cost: 6 
+Requires: 7% Oxygen
+------
+Increase Energy 1 
+(Requires 7% oxygen. Increase your Energy production 1 step.) 
+VP: 1 
+
+169: Tundra Farming
+Plant tag
+Cost: 16 
+Requires: -6 C 
+------
+Increase Plant 1 
+Increase M$ 2 
+Plant 
+(Requires -6 C or warmer. Increase your Plant production 1 step and your M$ production 2 steps. Gain 1 Plant.) 
+VP: 2 
+
+170: Aerobraked Ammonia Asteroid
+Space tag, Event tag 
+Cost: 26 
+------
+Microbe* Microbe* 
+Increase Heat 3
+Increase Plant 1 
+(Add 2 Microbes to ANOTHER card. Increase your heat production 3 steps and your Plant productions 1 step.) 
+
+171: Magnetic Field Dome
+Building tag	
+Cost: 5 
+------
+Decrease Energy 2 
+Increase Plant 1 
+TR 
+(Decrease your Energy production 2 steps and increase your Plant production 1 step. Raise your terraform rating 1 step.) 
+
+172: Pets
+Earth tag, Animal tag
+Cost: 10 
+any-City: Animal Resource 
+ANIMALS MAY NOT BE REMOVED FROM THIS CARD. 
+(Effect: When any City tile is placed, add an Animal to this card.) 
+------
+Animal Resource 
+(Add 1 Animal to this card. 1 VP per 2 Animals here.) 
+VP: 1/2 Animal Resource 
+
+173:* Protected Habitats 
+Cost: 5
+OPPONENTS MAY NOT REMOVE YOUR 
+Plant Animal Microbe 
+
+174: Protected Valley 
+Plant tag, Building tag 
+Cost: 23 
+------
+Increase M$ 2 
+Greenery Tile* 
+(Increase your M$ production 2 steps. Place on a greenery tile ON AN AREA RESERVED FOR OCEAN, disregarding normal placement restrictions, and increase oxygen 1 step.) 
+
+175:* Satellites 
+Space tag
+Cost: 10 
+------
+Increase M$ 1/Space. 
+(Increase your M$ production 1 step for each Space tag you have, including this.) 
+
+176: Noctis Farming 
+Plant tag, Building tag 
+Cost: 10 
+Requires: -20 C 
+------
+Increase M$ 1 
+Plant Plant 
+(Requires -20 C or warmer. Increase your M$ production 1 step and gain 2 Plants.) 
+VP: 1 
+
+177: Water Splitting Plant 
+Building tag 
+Cost: 12 
+Requires: Ocean Ocean 
+Energy Energy Energy -> O2 
+(Action: Spend 3 Energy to raise oxygen 1 step.) 
+------
+(Requires 2 ocean tiles.) 
+
+178: Heat Trappers
+Power tag, Building tag
+Cost: 6 
+------
+Decrease any-Heat 2 
+Increase Energy 
+(Decrease any heat production 2 steps and increase your Energy production 1 step.) 
+VP: -1 
+
+179: Soil Factory
+Building tag 
+Cost: 9 
+------
+Decrease Energy 1
+Increase Plant 1 
+(Decrease your Energy production 1 step and increase your Plant production 1 step.) 
+VP: 1 
+
+180:* Fuel Factory 
+Building tag 
+Cost: 6 
+------
+Decrease Energy 1
+Increase Titanium 1
+Increase M$ 1 
+(Decrease your Energy production 1 step and increase your titanium and your M$ production 1 step each.) 
+
+181: Ice Cap Melting
+Event tag
+Cost: 5 
+Requires: +2 C 
+------
+Ocean Tile
+(Requires +2 C or warmer. Place 1 ocean tile.) 
+
+182:* Corporate Stronghold 
+City tag, Building tag 
+Cost: 11 
+------
+Decrease Energy 1
+Increase M$ 3
+City Tile 
+(Decrease your Energy production 1 step and increase your M$ production 3 steps. Place a City tile.) 
+VP: -2 
+
+183: Biomass Combustors
+Power tag, Building tag 
+Cost: 4
+Requires: 6% O2 
+------
+Decrease any-Plant 1 
+Increase Energy 2 
+(Requires 6% oxygen. Decrease any Plant production 1 step and increase your Energy production 2 steps.) 
+VP: -1 
+
+184: Livestock 
+Animal tag 
+Cost: 13
+Requires: 9% O2 
+-> Animal 
+(Action: Add 1 Animal to this card.) 
+------
+Reduce Plant 1
+Increase M$ 2 
+(Requires 9% oxygen. Decrease your Plant production 1 step and increase your M$ production 2 steps. 1 VP for each Animal on this card.) 
+VP: 1/Animal
+
+185:* Olympus Conference 
+Science tag, Earth tag, Building tag
+Cost: 10
+Science: Science Resource OR -Science Resource +Card
+(When you play a Science tag, including this, either add a Science resource to this card, or remove a Science resource from this card to draw a card.) 
+------
+VP: 1 
+--- Ed. note: This should likely say “Effect:” on the card. 
+
+186:* Rad-suits
+Cost: 6
+Requires: City, City
+------
+Increase M$ 1.
+(Requires two cities in play. Increase your M$ up 1 step.)
+VP: 1
+
+187: Aquifer Pumping 
+Building tag
+Cost: 18 
+8 M$ (Steel) -> Ocean Tile 
+(Action: Spend 8 M$ to place 1 ocean tile. STEEL MAY BE USED as if you were playing a Building card.) 
+
+188: Flooding
+Event tag
+Cost: 7 
+------
+Ocean Tile
+-4 M$* 
+(Place an ocean tile. IF THERE ARE TILES ADJACENT TO THIS OCEAN TILE, YOU MAY REMOVE 4 M$ FROM THE OWNER OF ONE OF THOSE TILES.) 
+VP: -1 
+
+189: Energy Saving 
+Power tag 
+Cost: 15
+------
+Increase Energy/City* 
+(Increase your Energy production 1 step for each City tile in play.) 
+
+190: Local Heat Trapping 
+Event tag
+Cost: 1
+------
+-5 Heat +4 Plant OR +2 Animal* Resource 
+(Spend 5 heat to gain either 4 Plants, or to add 2 Animals to ANOTHER card.) 
+
+191: Permafrost Extraction 
+Event tag 
+Cost: 8 
+Requires: -8 C 
+------
+Ocean Tile 
+(Requires -8 C or warmer. Place 1 ocean tile.) 
+
+192:* Invention Contest
+Science tag, Event tag
+Cost: 2 
+------
+LOOK AT THE TOP 3 CARDS FROM THE DECK. TAKE 1 OF THEM INTO HAND AND DISCARD THE OTHER 2
+
+193: Plantation 
+Plant tag
+Cost: 15 
+Requires: Science Science 
+------
+Greenery Tile 
+(Requires 2 Science tags. Place a greenery tile and raise oxygen 1 step.)
+
+194:* Power Infrastructure
+Power tag, Building tag
+Cost: 4
+X Energy -> X M$
+(Action: Spend any amount of Energy and gain that amount of M$.) 
+
+195:* Indentured Workers 
+Event tag 
+Cost: 0 
+------
+NEXT CARD: -8 M$ 
+(The next card you play this generation costs 8 M$ less.) 
+VP: -1 
+
+196:* Lagrange Observatory 
+Science tag, Space tag 
+Cost: 9 
+------
++Card 
+(Draw 1 card.) 
+VP: 1 
+
+197:* Terraforming Ganymede 
+Jovian tag, Space tag 
+Cost: 33 
+------
+TR/Jovian 
+(Raise your TR 1 step for each Jovian tag you have, including this.) 
+VP: 2 
+
+198: Immigration Shuttles
+Earth tag, Space tag 
+Cost: 31 
+-------
+Increase M$ 5 
+(Increase your M$ production 5 steps. 1 VP for every 3rd City in play.) 
+VP: 1/3 City 
+
+199:* Restricted Area 
+Science tag
+Cost: 11 
+2 M$ -> +Card 
+(Action: Spend 2 M$ to draw a card.)
+------
+Special Tile 
+(Place this tile.) 
+
+200: Immigrant City
+City tag, Building tag
+Cost: 13
+City*: Increase M$ 1
+(Effect: Each time a City tile is placed, including this, increase your M$ production 1 step.) 
+------
+Decrease Energy 1 
+Decrease M$ 2 
+City Tile
+(Decrease your Energy production 1 step and decrease your M$ production 2 steps. Place a City tile.) 
+
+201:* Energy Tapping
+Power tag 
+Cost: 3 
+------
+Decrease any-Energy 
+Increase Energy 
+(Decrease any Energy production 1 step and increase your own 1 step.) 
+VP: -1 
+
+202: Underground Detonations
+Building tag
+Cost: 6
+10 M$ -> 2 Heat Production
+
+203: Soletta 
+Space tag 
+Cost: 35 
+------
+Increase 7 Heat 
+(Increase your heat production 7 steps.) 
+
+204:* Technology Demonstration 
+Science tag, Space tag, Event tag 
+Cost: 5 
+------
++Card +Card 
+(Draw 2 cards.) 
+
+205: Rad-Chem Factory 
+Building tag
+Cost: 8 
+------
+Decrease Energy 
+TR TR 
+(Decrease your Energy production 1 step. Raise your terraform rating 2 steps.) 
+
+206: Special Design 
+Science tag, Event tag 
+Cost: 4 
+------
+Requirement: O2/Ocean/Temperature: +/-2 
+(The next card you play this generation is +2 or -2 in global requirements, your choice.) 
+
+207:* Medical Lab
+Science tag, Building tag 
+Cost: 13
+------
+Increase M$/2 Building
+(Increase your M$ production 1 step for every 2 Building tags you have, including this.) 
+VP: 1
+
+208:* AI Central 
+Science tag, Building tag 
+Cost: 21 
+Requires: Science Science Science 
+-> +Card +Card 
+(Action: Draw 2 cards.) 
+------
+Decrease Energy 1 
+(Requires 3 Science tags to play. Decrease your Energy production 1 step.) 
+VP: 1
+

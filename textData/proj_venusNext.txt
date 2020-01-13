@@ -1,0 +1,435 @@
+Venus Next Cards
+
+213: Aerial Mappers
+Venus tag
+Cost: 11
+------
+-> Floater, 
+OR Floater -> Card 
+(Action: add 1 Floater to ANY card or spend 1 Floater here to draw 1 card).
+1VP
+
+214: Aerosport Tournament
+Event tag
+Cost: 7
+Requires: 5 Floater
+-----
+1 M$ per City tile in play
+1 VP
+(Requires that you have 5 Floaters. Gain 1 M$ per each City tile in play)
+
+215: Air-Scrapping Expedition
+Venus tag, Event tag
+Cost: 13
+-----
+VenusUp
+Gain 3 Floaters
+(Raise Venus 1 step. Add 3 Floaters to ANY Venus CARD)
+
+216: Atalanta Planitia Lab
+Venus tag, Science tag
+Cost: 10
+Requires: 3 Science tags
+-----
+Card Card
+2VP
+(Requires 3 Science tags. Draw 2 cards.)
+
+217: Atmoscoop
+Jovian tag, Space tag
+Cost: 22
+Requires: 3 Science tags
+-----
+TempUp TempUp OR VenusUp VenusUp
+Floater Floater
+1 VP
+(Requires 3 Science tags. Either raise the temperature 2 steps, or raise Venus 2 steps. Add 2 Floaters to ANY card).
+
+218: Comet for Venus
+Space tag, Event tag
+Cost: 11
+-----
+VenusUp
+Remove M$ any-4
+(Raise Venus 1 step. Remove up to 4M€ from any player with a Venus tag in play).
+
+219: Corroder Suits
+Venus tag
+Cost: 8
+-----
+Increase M$ 2
+Wild any-Venus card
+(Increase your M$ production 2 steps. Add 1 resource to ANY Venus CARD).
+
+220: Dawn City
+Space tag, City tag
+Cost: 15
+Requires: 4 Science tags
+-----
+Decrease Energy 1 
+Increase Titanium 1 
+City Tile Special Area
+3VP
+(Requires 4 Science tags. Decrease your energy production 1 step. Increase your titanium production 1 step. Place a City tile on the RESERVED AREA).
+
+221: Deuterium Export
+Venus tag, Energy tag, Space tag
+Cost: 11
+-----
+-> Floater, 
+OR Floater -> Increase Energy 1
+(Action: add 1 Floater to this card OR spend 1 Floater here to increase your energy production 1 step).
+
+222: Dirigibles
+Venus tag
+Cost: 11
+-----
+-> Floater
+Venus cards: Floaters = 3M$
+(Action: add 1 Floater to ANY card. Effect: when playing a Venus tag, Floaters here may be used as payment, and are worth 3M$ each)
+
+223: Extractor Balloons
+Venus tag
+Cost: 21
+-----
+-> Floater, 
+OR Floater Floater -> VenusUp
+(Action: add 1 Floater to this card, or remove 2 Floaters here to raise Venus 1 step).
+Floater Floater Floater
+(Add 3 Floaters to this card).
+
+224: Extremophiles
+Venus tag, Microbe tag
+Cost: 3
+Requires: 2 Science tags
+-----
+-> Microbe to any-card
+(Action: add 1 Microbe to ANY card)
+1VP/3 Microbe
+(Requires 2 Science tags. 1 VP for every 3rd Microbe on this card).
+
+225: Floating Habs
+Venus tag
+Cost: 5
+Requires: 2 Science tags
+-----
+M$ M$ -> Floater any-card.
+(Action: spend 2M$ to add 1 Floater to ANY card).
+1VP/2 Floaters
+(Requires 2 Science tags. 1 VP for every 2nd Floater on this card).
+
+226: Forced Precipitation
+Venus tag
+Cost: 8
+-----
+M$ M$ -> Floater, 
+OR Floater Floater -> VenusUp
+(Action: spend 2M$ to add 1 Floater to this card, OR spend 2 Floaters here to increase Venus 1 step).
+
+227: Freyja Biodomes
+Venus tag, Plant tag
+Cost: 14
+Requires: 10% Venus
+-----
+Microbe Microbe OR Animal Animal to ANY OTHER Venus CARD.
+Decrease Energy 1 
+Increase M$ 2
+2VP
+(Requires 10% on the Venus track. Add 2 Microbes or 2 Animals to another Venus card. Decrease your energy production 1 step and increase your megacredits production 2 steps).
+
+228: GHG Import from Venus
+Venus tag, Space tag, Event tag
+Cost: 23
+-----
+VenusUp
+Increase Heat 3
+(Raise Venus 1 step. Increase your heat production 3 steps).
+
+229: Giant Solar Shade
+Venus tag, Space tag
+Cost: 27
+-----
+VenusUp VenusUp VenusUp
+(Raise Venus 3 steps).
+
+230: Gyropolis
+City tag, Building tag
+Cost: 20
+-----
+Decrease Energy 2
+Increase M$ 1 per Venus tag
+Increase M$ 1 per Earth tag
+City Tile
+(Decrease your energy production 2 steps. Increase your M$ production 1 step for each Venus and Earth tag you have. Place a City tile).
+
+231: Hydrogen to Venus
+Space tag, Event tag
+Cost: 11
+-----
+VenusUp
+Floater/Jovian tag to a Venus CARD
+(Raise Venus 1 step. Add 1 Floater to A Venus CARD for each Jovian tag you have).
+
+232: Io Sulphur Research
+Science tag, Jovian tag
+Cost: 17
+-----
+Card OR
+Card Card Card if 3 Venus tags
+2VP
+(Draw 1 card, or draw 3 if you have at least 3 Venus tags).
+
+233: Ishtar Mining
+Venus tag
+Cost: 5
+Requires: 8% Venus
+-----
+Increase Titanium 1
+(Requires Venus 8%. Increase your titanium production 1 step).
+
+234: Jetstream Microscrappers
+Venus tag
+Cost: 12
+-----
+Titanium -> Floater Floater
+OR Floater Floater -> VenusUp
+(Action: spend 1 titanium to add 2 Floaters here, OR spend 2 Floaters here to raise Venus 1 step).
+
+235: Local Shading
+Venus tag
+Cost: 4
+-----
+-> Floater
+OR Floater -> Increase M$ 1
+(Action: add 1 Floater to this card, or spend 1 Floater here to raise your M$ production 1 step).
+
+236: Luna Metropolis
+Space tag, Earth tag, City tag
+Cost: 21
+-----
+Increase M$ 1 per Earth tag
+City Tile Special Area
+2VP
+(Increase your M$ production 1 step for each Earth tag you have, including this. Place a City tile on the RESERVED AREA).
+
+237: Luxury Foods
+Cost: 8
+Requires: Venus tag, Earth tag, Jovian tag
+-----
+2VP
+(Requires Venus, Earth and Jovian tags)
+
+238: Maxwell Base
+Venus tag, City tag
+Cost: 18
+Requires: 12% Venus
+-----
+-> Wild any-Venus card
+(Action: add 1 resource to ANOTHER Venus CARD).
+Decrease Energy 1
+City Tile Special Area
+3VP
+(Requires Venus 12%. Decrease your energy production 1 step. Place a City tile on the reserved area).
+
+239: Mining Quota
+Building tag
+Cost: 5
+Requires: Venus tag, Earth tag, Jovian tag
+-----
+Increase Steel 2
+(Requires Venus, Earth and Jovian tags. Increase your steel production 2 steps).
+
+240: Neutralizer Factory
+Venus tag
+Cost: 7
+Requires: 10% Venus
+-----
+VenusUp
+(Requires Venus 10%. Increase the Venus track 1 step).
+
+241: OMNICOURT
+Building tag
+Cost: 11
+Requires: Venus tag, Earth tag, Jovian tag
+-----
+TR TR
+(Requires Venus, Earth and Jovian tags. Increase your TR 2 steps).
+
+242: Orbital Reflectors
+Venus tag, Space tag
+Cost: 26
+-----
+VenusUp VenusUp
+Increase Heat 2
+(Raise Venus 2 steps. Increase your heat production 2 steps).
+
+243: Rotator Impacts
+Space tag
+Cost: 6
+Requires: max 14% Venus
+-----
+6M$ (Titanium) -> Asteroid
+OR Asteroid -> VenusUp
+(Action: spend 6 M$ to add an asteroid resource to this card (TITANIUM MAY BE USED), or spend 1 resource from this card to increase Venus 1 step).
+(Venus must be 14% or lower).
+
+244: Sister Planet Support
+Venus tag, Earth tag
+Cost: 7
+Requires: Venus tag, Earth tag
+-----
+Increase M$ 3
+(Requires Venus and Earth tags. Increase your M$ production 3 steps).
+
+245: Solarnet
+Cost: 7
+Requires: Venus tag, Earth tag, Jovian tag
+-----
+Card Card
+1VP
+(Requires Venus, Earth and Jovian tags. Draw 2 cards).
+
+246: Spin inducing Asteroid
+Space tag, Event tag
+Cost: 16
+Requires: max 10% Venus
+-----
+VenusUp VenusUp
+(Venus must be 10% or lower. Raise Venus 2 steps).
+
+247: Sponsored Academies
+Science tag, Earth tag
+Cost: 9
+-----
+-Card, Card Card Card, all-players Card
+1VP
+(Discard 1 card from your hand and THEN draw 3 cards. All OPPONENTS draw 1 card).
+
+248: Stratopolis
+Venus tag, City tag
+Cost: 22
+Requires: Science tag, Science tag
+-----
+-> Floater Floater any-Venus card
+(Action: add 2 Floaters to ANY Venus CARD).
+Increase M$ 2
+City Tile Special Area
+1 VP/3 Floaters
+(Requires 2 Science tags. Increase your M$ production 2 steps. Place a City tile on the reserved area. 1 VP for every 3rd Floater on this card).
+
+249: Stratospheric Birds
+Venus tag, Animal tag
+Cost: 12
+-----
+-> Animal 
+(Action: add 1 Animal to this card).
+-Floater
+1VP/Animal
+(Requires Venus 12% and that you spend 1 Floater from any card. 1 VP for each Animal on this card).
+
+250: Sulphur Exports
+Venus tag, Space tag
+Cost: 21
+-----
+VenusUp
+Increase M$ 1 per Venus tag
+(Increase Venus 1 step. Increase your M$ production1 step for each Venus tag you have, including this).
+
+251: Sulphur Eating Bacteria
+Venus tag, Microbe tag
+Cost: 6
+Requires: 6% Venus
+-----
+-> Microbe
+OR x Microbe -> 3xM$
+(Action: add 1 Microbe to this card, or spend any number of Microbes here to gain triple amount of M$).
+(Requires Venus 6%).
+
+252: Terraforming Contract
+Earth tag
+Cost: 8
+Requires: 25 TR
+-----
+Increase M$ 4
+(Requires that you have at least 25 TR. Increase your M$ production 4 steps).
+
+253: Thermophiles
+Venus tag, Microbe tag
+Cost: 9
+Requires: 6% Venus
+-----
+-> Microbe to any Venus card
+OR Microbe Microbe -> VenusUp
+(Action: add 1 Microbe to ANY Venus CARD or spend 2 Microbes here to raise Venus 1 step).
+(Requires Venus 6%)
+
+254: Water to Venus
+Space tag, Event tag
+Cost: 9
+-----
+VenusUp
+(Raise Venus 1 step)
+
+255: Venus Governor
+Venus tag, Venus tag
+Cost: 4
+Requires: Venus tag, Venus tag
+-----
+Increase M$ 2
+(Requires 2 Venus tags. Increase your M$ production 2 steps).
+
+256: Venus Magnetizer
+Venus tag
+Cost: 7
+Requires: 10% Venus
+-----
+Decrease Energy 1 -> VenusUp
+(Action: decrease your energy production 1 step to raise Venus 1 step).
+(Requires Venus 10%)
+
+257: Venus Soils
+Venus tag, Plant tag
+Cost: 20
+-----
+VenusUp
+Increase Plant 1
+Microbe Microbe*
+(Raise Venus 1 step. Increase your Plant production 1 step. Add 2 Microbes to ANOTHER card).
+
+258: Venus Waystation
+Venus tag, Space tag
+Cost: 9
+-----
+Venus card: -2M$
+(Effect: when you play a Venus tag, you pay 2 M$ less for it).
+VP: 1
+
+259: Venusian Animals
+Venus tag, Science tag, Animal tag
+Cost: 15
+Requires: 18% Venus
+------
+Science tag: Animal
+(Effect: when you play a Science tag, including this, add 1 Animal to this card).
+1VP/Animal
+(Requires Venus 18%. 1 VP for each Animal on this card).
+
+260: Venusian Insects
+Venus tag, Microbe tag
+Cost: 5
+Requires: 12% Venus
+-----
+-> Microbe
+(Action: add 1 Microbe to this card).
+1VP/2 Microbes
+(Requires Venus 12%. 1 VP for each 2nd Microbe on this card).
+
+261: Venusian Plants
+Venus tag, Plant tag
+Cost: 13
+Requires: 16% Venus
+-----
+VenusUp
+Microbe OR Animal to Venus card
+1VP
+(Requires Venus 16%. Raise Venus 1 step. Add 1 Microbe or 1 Animal to ANOTHER VENUS CARD).

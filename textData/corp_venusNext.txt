@@ -1,0 +1,51 @@
+Venus Next Corporations 
+
+Aphrodite 
+Venus tag, Plant tag 
+Starting resources: 
+47 M$ 
+Increase Plant 1 
+(You start with 47 M$ and 1 plant production.) 
+Effect: 
+VenusUp: 2 M$ 
+(Effect: Whenever Venus is terraformed 1 step, you gain 2 M$.) 
+
+Celestic 
+Venus tag 
+Starting resources: 
+42 M$ 
+Card^Floater Card^Floater 
+(You start with 42 M#$. As your first action, reveal cards from the deck until you have revealed 2 cards with a floater icon on it. Take those 2 cards into hand, and discard the rest. 1 VP per 3 floaters on this card.) 
+Effect: 
+-> Floater* 
+(Action: Add a floater to ANY card.) 
+VP: 1/3 Floaters 
+
+Manutech
+Building tag 
+Starting resoures: 
+Increase Steel 1 
+35 M$ 
+(You start with 1 steel production, and 35 M$.) 
+Effect: 
+Increase (Wild): (Wild) 
+(Effect: For each step you increase the production of a resource, including this, you also gain that resource.) 
+
+MSI Morning Star Inc. 
+Venus tag 
+Starting resoures: 
+50 M$ 
+Card^Venus Card^Venus Card^Venus 
+(You start with 50 M$. As your first action, reveal cards from the deck until you have revealed 3 Venus-tag cards. Take those into hand and discard the rest.) 
+Effect: 
+Requirements: Venus: +/- 2 
+(Effect: Your Venus requirements are +/- 2 steps, your choice in each case.) 
+
+Viron 
+Microbe tag 
+Starting resources: 
+48 M$ 
+(You start with 48 M$.) 
+Action: 
+-> (Action: -> ) 
+(Action: Use a blue card action that has already been used this turn.) 

@@ -1,0 +1,34 @@
+BGG Corporations 
+
+Recyclon
+Microbe tag, Building tag
+Starting resources:
+38 M$
+Increase Steel 1
+(You start with 38 M$ and 1 Steel production.)
+Effect:
+Building: + 1 Microbe OR - 2 Microbe Increase Plant 1
+(Effect: When you play a building tag, including this, gain 1 microbe to this card, or remove 2 microbes here and raise your plant production 1 step.)
+
+Splice: Tactical Genomics
+Microbe tag
+Starting resources:
+44 M$
+Card^Microbe
+(You start with 44 M$. As your first action, reveal cards until you have revealed a microbe tag. Take that card into hand, and discard the rest.)
+Effect:
+any-Microbe: +2M$* OR + 1 Microbe*
+any-Microbe: +2M$
+(Effect: Each time a microbe tag is played, including this, THAT PLAYER gains 2M$, or adds a microbe to THAT card, and you gain 2M$.)
+
+Arcadian Communities 
+(No tags) 
+Starting resources:
+10 Steel 
+40 M$
+1 Community*
+(You start with 40 M$ and 10 Steel. AS YOUR FIRST ACTION, PLACE A COMMUNITY (PLAYER MARKER) ON A NON-RESERVED AREA.)
+Action:
+-> ACTION: PLACE A COMMUNITY (PLAYER MARKER) ON A NON-RESERVED AREA ADJACENT TO ONE OF YOUR TILES OR MARKED AREAS
+Effect:
+EFFECT: MARKED AREAS ARE RESERVED FOR YOU. WHEN YOU PLACE A TILE THERE, GAIN 3M$

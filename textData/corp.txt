@@ -1,0 +1,121 @@
+Corporations 
+
+Credicor
+(No tags) 
+Starting resources: 
+57 M$ 
+(You start with 57 M$) 
+Effect: 
+-20: 4
+(Effect: After you pay for a card or standard project with a basic cost of 20 M$ or more, you gain 4 M$.) 
+
+Ecoline 
+Plant tag
+Starting resources: 
+Increase Plant 2 
+Plant Plant Plant 
+36 M$ 
+(You start with 2 plant production, 3 plants, and 36 M$.) 
+Effect: 
+7 Plant -> Greenery Tile 
+(Effect: You may always pay 7 plants, instead of 8, to place 1 greenery.) 
+
+Helion
+Space tag 
+Starting resources: 
+Increase Heat 3
+42 M$ 
+(You start with 3 heat production and 42 M$.) 
+Effect: 
+X Heat = X M$ 
+(Effect: You may use heat as M$. You may not use M$ as heat.) 
+
+Interplanetary Cinematics 
+Building tag 
+Starting resources: 
+20 Steel
+30 M$ 
+(You start with 20 steel and 30 M$.) 
+Effect: 
+Event: 2 M$ 
+(Effect: Each time you play an event, you gain 2 M$.) 
+
+Inventrix 
+Science tag 
+Starting resources: 
+Card Card Card 
+45 M$ 
+(As your first action in the game, draw 3 cards. Start with 45 M$.) 
+Effect: 
+Requirements: O2/Ocean/Temp: +/- 2 
+(Effect: Your temperature, oxygen, and ocean requirements are +2 or -2 steps, your choice in each case.) 
+
+Mining Guild 
+Building tag, Building tag
+Starting resources: 
+30 M$ 
+5 Steel
+Increase Steel 1 
+(You start with 30 M$, 5 steel, and 1 steel production.) 
+Effect: 
+Steel/Titanium: Increase Steel 1 
+(Effect: Each time you get any steel or titanium as a placement bonus on the map, increase your steel production 1 step.) 
+
+Phobolog 
+Space tag 
+Starting resources: 
+10 Titanium 
+23 M$ 
+(You start with 10 titanium and 23 M$.) 
+Effect: 
+Titanium: +1 M$ 
+(Effect: Your titanium resources are each worth 1 M$ extra.) 
+--- Ed. note: It is not "Phoblog." 
+
+Saturn Systems (Corporate Era) 
+Jovian tag 
+Starting resources: 
+Increase Titanium 1 
+42 M$ 
+(You start with 1 titanium production and 42 M$.) 
+Effect: 
+any-Jovian: Increase M$ 1 
+(Effect: Each time any Jovian tag is put into play, including this, increase your M$ production 1 step.) 
+
+Teractor (Corporate Era) 
+Earth tag
+Starting resources: 
+60 M$
+(You start with 60 M$.) 
+Effect: 
+Earth: -3 M$ 
+(Effect: When playing an Earth card, you pay 3 M$ less for it.) 
+
+Tharsis Republic
+Building tag
+Starting resources: 
+40 M$ 
+City Tile 
+(You start the game with 40 M$. As your first action in the game, place a city tile.) 
+Effect: 
+any-City*: Increase M$ 1 
+City: 3 M$ 
+(Effect: Whenever any city tile is placed ON MARS, increase your M$ production 1 step. When you place a city tile, gain 3 M$.) 
+-- Ed. note: Some printings don't have the word "corporation" at the top of this card. This is a misprint. 
+
+Thorgate
+Power tag 
+Starting resources: 
+Increase Energy 1 production and 48 M$.) 
+Effect: 
+Power*: -3 M$ 
+(Effect: When playing a power card OR THE STANDARD PROJECT POWER PLANT, you pay 3 M$ less for it. 
+
+United Nations Mars Initiative 
+Earth tag 
+Starting resources: 
+40 M$ 
+(You start the game with 40 M$.) 
+Action: 
+3 M$ -> TR* 
+(Action: If your Terraform Rating was raised this generations, you may pay 3 M$ to raise it 1 step more.) 

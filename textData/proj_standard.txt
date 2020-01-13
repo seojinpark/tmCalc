@@ -1,0 +1,30 @@
+S01: Sell Patents
+Cost: 0 
+------
+Gain M$ 1
+
+S02: Power Plant
+Cost: 11 
+------
+Increase Energy 1
+
+S03: Asteroid
+Cost: 14 
+------
+TempUp
+
+S04: Aquifer
+Cost: 18 
+------
+Ocean Tile
+
+S05: Greenery
+Cost: 23
+------
+O2
+
+S05: City
+Cost: 25
+------
+Increase M$ 1
+City Tile

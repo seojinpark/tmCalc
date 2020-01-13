@@ -1,0 +1,37 @@
+Promo Cards
+
+209: Small Asteroid
+Space tag, Event tag
+Cost: 10
+------
+TempUp 
+Remove any-Plant any-Plant
+(Raise temperature 1 step. Remove up to 2 Plant from any player.)
+
+210: Self-Replicating Robots
+Cost: 7
+Requires: Science Science
+-> reveal 1 card with Space or Building tag, place 2 resources on it OR -> resources X 2
+(Action: Reveal and place a SPACE OR BUILDING card here from hand, and place 2 resources on it, OR double the resources on a card here.
+Effect: Cards here may be played as if from hand with its cost reduced by the number of resources on it.)
+------
+(Requires 2 Science tags.)
+
+211: Snow Algae
+Plant tag
+Cost: 12
+Requires: Ocean Ocean
+------
+Increase Plant 1
+Increase Heat 1
+(Requires 2 oceans. Increase your Plant production and your heat production 1 step each.)
+
+212: Penguins
+Animal tag
+Cost: 7
+Requires: 8 Ocean
+-> Animal Resource
+(Action: Add 1 Animal to this card.)
+------
+(Requires 8 ocean. 1 VP for each Animal on this card.)
+VP: 1/Animal Resource
