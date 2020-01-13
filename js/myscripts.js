@@ -98,11 +98,16 @@ function showAll() {
 ////////////////////// My code! ////////////////////////////
 function undo() {
   var lastAction = log_current.pop();
-  resourceValue = lastAction[1];
-  resourceProduction = lastAction[2];
-  terraformingValue = lastAction[3];
-  showAll();
-  alert("Undone the last action: " + lastAction[0] + ". Undo only reverts resource, production, and terraforming. Other changes are not tracked.");
+  if (log_current.length > 0) {
+    var stateBeforeLastAction = log_current[log_current.length - 1];
+    resourceValue = stateBeforeLastAction[1];
+    resourceProduction = stateBeforeLastAction[2];
+    terraformingValue = stateBeforeLastAction[3];
+    showAll();
+    alert("Undone the last action: " + lastAction[0] + ". Undo only reverts resource, production, and terraforming. Other changes are not tracked.");
+  } else {
+    alert("This is the start of the current stage. Cannot undo anymore.")
+  }
 }
 
 function toggleResEditDiv(id) {
