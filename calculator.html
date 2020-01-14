@@ -75,13 +75,13 @@
       <button id="terraforming_tr_tag" class="button btn-tile rating" onclick="updateTerraforming('tr', parseInt(terraforming_tr.value) + 1);" title="filter cards which increase TR" style="padding-left:7px;"></button>
       <input type="number" title="TR value" id="terraforming_tr" oninput="updateTerraforming('tr', terraforming_tr.value);" value="21" min="20" max="99">
 
-      <output id="terraforming_temp" for="terraforming_temp_slider" class="output-label" style="color:#f25540; margin-left: 200px;">-30</output>
+      <output id="terraforming_temp" for="terraforming_temp_slider" class="output-label" style="color:#f25540; margin-left: 200px; cursor: pointer;" onclick="updateTerraforming('temp', parseInt(terraforming_temp.value) + 1);" >-30</output>
       <input id="terraforming_temp_slider" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="terraforming_temp.value = terraforming_temp_slider.value; updateTerraforming('temp', parseInt(terraforming_temp_slider.value));" class="track-temp-background track-temp-thumb" style="width:180px;margin-right:65px;margin-left:10px;">
 
-      <output id="terraforming_ocean" for="terraforming_ocean_slider" class="output-label" style="margin-left: 110px;">0</output>
+      <output id="terraforming_ocean" for="terraforming_ocean_slider" class="output-label" style="margin-left: 110px; cursor: pointer;" onclick="updateTerraforming('ocean', parseInt(terraforming_ocean.value) + 1);" >0</output>
       <input id="terraforming_ocean_slider" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="terraforming_ocean.value = terraforming_ocean_slider.value; updateTerraforming('ocean', parseInt(terraforming_ocean_slider.value));;" class=" track-oceans-thumb" style="width:100px;">
 
-      <output id="terraforming_o2" for="terraforming_o2_slider" class="output-label" style="color:rgb(246,241,175);">0</output>
+      <output id="terraforming_o2" for="terraforming_o2_slider" class="output-label" style="color:rgb(246,241,175); cursor: pointer;" onclick="updateTerraforming('o2', parseInt(terraforming_o2.value) + 1);">0</output>
       <input id="terraforming_o2_slider" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="terraforming_o2.value = terraforming_o2_slider.value; updateTerraforming('o2', parseInt(terraforming_o2_slider.value));" class="track-oxygen-background track-oxygen-thumb">
 
       <!-- <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> Just to display selected value -->
