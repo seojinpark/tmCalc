@@ -15,7 +15,11 @@ request2.open("GET", "textData/preludeCards.json", false);
 request2.send(null);
 var projData_prelude = JSON.parse(request2.responseText);
 var projData = projData_basic.concat(projData_prelude);
-// alert (projData[0].title);
+var projDataIndexed = {};
+projData.forEach(function (projCard, index) {
+  projDataIndexed[projCard.number] = projCard;
+});
+
 var resourceTypes = ['MC', 'Steel', 'Titanium', 'Plant', 'Energy', 'Heat'];
 var resourceTypeToIdx = {'MC': 0, 'M\$': 0, 'Steel': 1, 'Titanium': 2, 'Plant': 3, 'Energy': 4, 'Heat': 5};
 var resourceTypesSmall = ['mc', 'steel', 'titanium', 'plant', 'energy', 'heat'];
@@ -72,6 +76,7 @@ function showAll() {
   // document.getElementById("totalGlobals").innerHTML = displayedGlobals;
   
   refreshStatus();
+  refreshUnplayableCard();
   
   //making all buttons inactive
   y = document.querySelectorAll('button.active');
@@ -106,6 +111,19 @@ function refreshStatus() {
   });
 }
 
+function refreshUnplayableCard() {
+  x = document.querySelectorAll('li.filterDiv');
+  for (i = 0; i < x.length; i++) {
+    if (x[i].querySelector(".number") != null) {
+      var rawNumber = x[i].querySelector(".number").textContent.substring(1);
+      w3RemoveClass(x[i], "unplayable-card");
+      if (isPlayable(rawNumber) == false) {
+        w3AddClass(x[i], "unplayable-card");
+      }
+    }
+  }
+}
+
 function showUsed() {
   console.log("cardsPlayed: " + cardsUsed);
   x = document.querySelectorAll('li.filterDiv');
@@ -137,6 +155,10 @@ function showHand() {
       var rawNumber = x[i].querySelector(".number").textContent.substring(1);
       if (cardsInHand.has(rawNumber)) {
         w3AddClass(x[i], "show");
+        w3RemoveClass(x[i], "unplayable-card");
+        if (isPlayable(rawNumber) == false) {
+          w3AddClass(x[i], "unplayable-card");
+        }
         console.log("showing " + x[i].querySelector(".number").textContent + " by .number");
       }
     } else {
@@ -383,6 +405,26 @@ function payAndPromote() {
   refreshScreen();
 }
 
+function isPlayable(number) {
+  if (number in projDataIndexed) {
+    projCard = projDataIndexed[number];
+    if (typeof projCard.cost == 'undefined') { // Prelude cards don't have any cost.
+      return true;
+    }
+
+    availableMoney = resourceValue[0];
+    if (typeof projCard.tag !== 'undefined' && projCard.tag.Building > 0) {
+      availableMoney += resourceValue[1] * worth_Steel
+    }
+    if (typeof projCard.tag !== 'undefined' && projCard.tag.Space > 0) {
+      availableMoney += resourceValue[2] * worth_Titanium
+    }
+    return availableMoney >= projCard.cost;
+  } else {
+    return false;
+  }
+}
+
 //////////////////////PARSE function ////////////////////////////////
 function parseURLParams(url) {
     var queryStart = url.indexOf("#") + 1,
@@ -418,6 +460,7 @@ function displayCardsOnly() {
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterFunction(id) {
   console.log("invoked filterFunction()");
+  refreshUnplayableCard();
   var input, filter, ul, li, a, i, x;
 
   clickedElementID = document.getElementById(id);
@@ -947,16 +990,15 @@ function selectCard (clickedCard) {
     lastClickedCard = clickedCard
     clickedCard.classList.toggle("last-clicked-card");
     
-    projData.forEach(function (projCard, index) {
-      if (projCard.number == selectedCardNumber.substring(1)) {
-        // console.log(projCard, index);
-        projCardForPromotion = projCard
+    if (selectedCardNumber.substring(1) in projDataIndexed) {
+      projCard = projDataIndexed[selectedCardNumber.substring(1)];
+      projCardForPromotion = projCard
         if (typeof projCard.cost == 'undefined') { // Prelude cards don't have any cost.
           projCard['cost'] = 0
         }
 
         // alert (projCard.title);
-        if (clickedCard.classList.contains("clicked-card")) {
+        if (clickedCard.classList.contains("last-clicked-card")) {
           document.getElementById("paymentFooter").style.display = "block";
         } else {
           document.getElementById("paymentFooter").style.display = "none";
@@ -995,11 +1037,58 @@ function selectCard (clickedCard) {
           document.getElementById("payDisplayOutcome").innerHTML = "";
         }
         cardForPromotion = projCard;
-      }
-    });
+    }
 
+    // projData.forEach(function (projCard, index) {
+    //   if (projCard.number == selectedCardNumber.substring(1)) {
+    //     // console.log(projCard, index);
+    //     projCardForPromotion = projCard
+    //     if (typeof projCard.cost == 'undefined') { // Prelude cards don't have any cost.
+    //       projCard['cost'] = 0
+    //     }
 
-    projData[selectedCardNumber.substring(1)]
+    //     // alert (projCard.title);
+    //     if (clickedCard.classList.contains("last-clicked-card")) {
+    //       document.getElementById("paymentFooter").style.display = "block";
+    //     } else {
+    //       document.getElementById("paymentFooter").style.display = "none";
+    //     }
+        
+    //     // document.getElementById("paymentCardTitle").innerHTML = "Wanna promote \"" + projCard.title + "\" ?<BR>";
+    //     document.getElementById("paymentCardTitle").innerHTML = projCard.title + "<BR>";
+    //     document.getElementById("paymentCardCost").innerHTML = projCard.cost;
+    //     remainingCost = projCard.cost;
+    //     if (typeof projCard.tag !== 'undefined' && projCard.tag.Building > 0) {
+    //       document.getElementById("payBySteel").style = "display: block"; 
+    //       steelPayAmount = Math.min(resourceValue[1], Math.floor(remainingCost / worth_Steel))
+    //       remainingCost -= steelPayAmount * worth_Steel
+    //       document.getElementById("payBySteelAmount").innerHTML = steelPayAmount;//  + ' (' + steelPayAmount * worth_Steel + ' in M\$)';
+    //     } else {
+    //       document.getElementById("payBySteel").style = "display: none"; 
+    //       document.getElementById("payBySteelAmount").innerHTML = 0
+    //     }
+    //     if (typeof projCard.tag !== 'undefined' && projCard.tag.Space > 0) {
+    //       document.getElementById("payByTitanium").style = "display: block"; 
+    //       titaniumPayAmount = Math.min(resourceValue[2], Math.floor(remainingCost / worth_Titanium))
+    //       remainingCost -= titaniumPayAmount * worth_Titanium
+    //       document.getElementById("payByTitaniumAmount").innerHTML = titaniumPayAmount;// + ' (' + titaniumPayAmount * worth_Titanium + ' in M\$)';
+    //     } else {
+    //       document.getElementById("payByTitanium").style = "display: none"; 
+    //       document.getElementById("payByTitaniumAmount").innerHTML = 0;
+    //     }
+
+    //     document.getElementById("payByMCAmount").innerHTML = remainingCost;
+        
+    //     if (typeof projCard.outcome !== 'undefined') {
+    //       document.getElementById("manualActionPanel").style.display = "block";
+    //       document.getElementById("payDisplayOutcome").innerHTML = projCard.outcome;
+    //     } else {
+    //       document.getElementById("manualActionPanel").style.display = "none";
+    //       document.getElementById("payDisplayOutcome").innerHTML = "";
+    //     }
+    //     cardForPromotion = projCard;
+    //   }
+    // });
 
     if (selectedCards.indexOf(selectedCardNumber) >= 0) {
       selectedCards = selectedCards.replace(selectedCardNumber, "");

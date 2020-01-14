@@ -37,12 +37,18 @@ body {
 }
 
 .clicked-card {
-  box-shadow: 0 0 1px 1px #444, 0 0 15px 5px white !important;
-  filter: grayscale(0.6);
+  /* box-shadow: 0 0 1px 1px #444, 0 0 15px 5px white !important; */
+  /* filter: grayscale(0.6); */
 }
 
 .last-clicked-card {
+  box-shadow: 0 0 1px 1px #444, 0 0 15px 5px white !important;
   zoom: 130%;
+}
+
+.unplayable-card {
+  filter: grayscale(0.7);
+  box-shadow: 0 0 1px 1px #444, 0 0 15px 5px red !important;
 }
 
 .filterDiv3 {
