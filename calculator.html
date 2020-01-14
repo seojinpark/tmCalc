@@ -75,8 +75,8 @@
       <button id="terraforming_tr_tag" class="button btn-tile rating" onclick="updateTerraforming('tr', parseInt(terraforming_tr.value) + 1);" title="filter cards which increase TR" style="padding-left:7px;"></button>
       <input type="number" title="TR value" id="terraforming_tr" oninput="updateTerraforming('tr', terraforming_tr.value);" value="21" min="20" max="99">
 
-      <output id="terraforming_temp" for="terraforming_temp_slider" class="output-label" style="color:#f25540; margin-left: 225px;">-30</output>
-      <input id="terraforming_temp_slider" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="terraforming_temp.value = terraforming_temp_slider.value; updateTerraforming('temp', parseInt(terraforming_temp_slider.value));" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;margin-left:15px;">
+      <output id="terraforming_temp" for="terraforming_temp_slider" class="output-label" style="color:#f25540; margin-left: 200px;">-30</output>
+      <input id="terraforming_temp_slider" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="terraforming_temp.value = terraforming_temp_slider.value; updateTerraforming('temp', parseInt(terraforming_temp_slider.value));" class="track-temp-background track-temp-thumb" style="width:180px;margin-right:65px;margin-left:10px;">
 
       <output id="terraforming_ocean" for="terraforming_ocean_slider" class="output-label" style="margin-left: 110px;">0</output>
       <input id="terraforming_ocean_slider" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="terraforming_ocean.value = terraforming_ocean_slider.value; updateTerraforming('ocean', parseInt(terraforming_ocean_slider.value));;" class=" track-oceans-thumb" style="width:100px;">
@@ -136,7 +136,7 @@
       <button id="showAll"  class="button btn-undo  " onclick="clearInput();showAll();" >All</button>
       <button id="showHand"  class="button btn-undo  " onclick="showHand();" >Hand</button>
       <button id="showUsed"  class="button btn-undo  " onclick="showUsed();" >Used</button>
-      <button id="content"  class="button btn-undo  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
+      <button id="content"  class="button btn-undo  " onclick="toggleContentDiv();" title="reveal Card Content filters">...</button>
       <input type="text" id="myInput" onkeydown="filterWrapperForSearch(event, id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
       
       <button id="btn-produce" class="button btn-produce" onclick="produce();" title="produce">PRODUCE</button>
@@ -240,13 +240,13 @@
 
     </div> -->
 
-    <div id="buttonsContainer-resource" style="zoom: 130%;">
+    <div id="buttonsContainer-resource" style="zoom: 140%;">
       <div class="moneyStatus resourceStatus" >MC</div>
       <!-- <div id="mc" class="totalCardsCount odometer" data-minintegerlen="3" onclick="toggleResEditDiv(id);"></div> -->
       <div id="mc" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="mc_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateRes('mc', -1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:10px;" onclick="updateRes('mc', 1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateRes('mc', 1)" >+</button>
         <!-- <div id="payBySteelAmount" class="payment-label" style="color:#271a18; display: inline-block">0</div> -->
       </div>
       <!-- <div id="prod_mc" class="productionStatus">0</div>  -->
@@ -255,24 +255,24 @@
       <div id="steel_worth" class="steel resourceStatus" onclick="toggleResEditDiv(id);">2</div>
       <div id="steel_worth_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateSteelWorth(-1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateSteelWorth(1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateSteelWorth(1)" >+</button>
       </div>
       <div id="steel" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="steel_edit" class="resource-edit" style="display:none">
         <button class="button2   btn-price" onclick="updateRes('steel', -1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateRes('steel', 1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateRes('steel', 1)" >+</button>
       </div>
       <input type="number" class="productionStatus title="MC production" id="prod_steel" oninput="updateProd(id);" value="0" min="-99" max="99"></input>
 
       <div id="titanium_worth" class="titanium resourceStatus" onclick="toggleResEditDiv(id);">3</div>
       <div id="titanium_worth_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateTitaniumWorth(-1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateTitaniumWorth(1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateTitaniumWorth(1)" >+</button>
       </div>
       <div id="titanium" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="titanium_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateRes('titanium', -1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateRes('titanium', 1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateRes('titanium', 1)" >+</button>
       </div>
       <input type="number" class="productionStatus" title="MC production" id="prod_titanium" oninput="updateProd(id);" value="0" min="-99" max="99"></input>
 
@@ -280,12 +280,12 @@
       <div id="plant_worth" class="plant resourceStatus" onclick="toggleResEditDiv(id);" >8</div>
       <div id="plant_worth_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updatePlantWorth(-1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updatePlantWorth(1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updatePlantWorth(1)" >+</button>
       </div>
       <div id="plant" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="plant_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateRes('plant', -1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateRes('plant', 1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateRes('plant', 1)" >+</button>
       </div>
       <input type="number" class="productionStatus" title="MC production" id="prod_plant" oninput="updateProd(id);" value="0" min="-99" max="99"></input>
 
@@ -293,7 +293,7 @@
       <div id="energy" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="energy_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateRes('energy', -1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateRes('energy', 1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateRes('energy', 1)" >+</button>
       </div>
       <input type="number" class="productionStatus" title="MC production" id="prod_energy" oninput="updateProd(id);" value="0" min="-99" max="99"></input>
 
@@ -301,7 +301,7 @@
       <div id="heat" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="heat_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateRes('heat', -1)" title="decrease Price filter by 1">-</button>
-        <button class="button2   btn-price" style="margin-right:5px;" onclick="updateRes('heat', 1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px;" onclick="updateRes('heat', 1)" >+</button>
       </div>
       <input type="number" class="productionStatus" title="MC production" id="prod_heat" oninput="updateProd(id);" value="0" min="-99" max="99"></input>
     </div>

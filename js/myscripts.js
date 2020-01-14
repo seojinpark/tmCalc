@@ -256,7 +256,7 @@ function produce() {
 
 function updateProd(id) {
   resourceTypesSmall.forEach(function (type, index) {
-    resourceProduction[index] = document.getElementById("prod_" + type).value;
+    resourceProduction[index] = Number(document.getElementById("prod_" + type).value);
   });
   // prod_mc = document.getElementById("prod_mc").value;
   // prod_steel = document.getElementById("prod_steel").value;
@@ -458,7 +458,6 @@ function displayCardsOnly() {
         console.log("showing " + x[i].id+ "by .id");
       }
     }
-
   }
 }
 
