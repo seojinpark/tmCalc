@@ -33,6 +33,7 @@ var resourceProduction = [0, 0, 0, 0, 0, 0];
 var worth_Steel = 2;
 var worth_Titanium = 3;
 var worth_Plant = 8;
+var worth_Heat = 1;
 var proj_discount = 0;
 var proj_rebate = 0;
 var projCardForPromotion = null;
@@ -376,7 +377,8 @@ function updatePay(resType, changeVal) {
   
   steelPayAmount = document.getElementById("payBySteelAmount").innerHTML;
   titaniumPayAmount = document.getElementById("payByTitaniumAmount").innerHTML;
-  remainingCost = projCardForPromotion.cost - steelPayAmount * worth_Steel - titaniumPayAmount * worth_Titanium;
+  heatPayAmount = document.getElementById("payByHeatAmount").innerHTML;
+  remainingCost = projCardForPromotion.cost - steelPayAmount * worth_Steel - titaniumPayAmount * worth_Titanium - heatPayAmount * worth_Heat;
   document.getElementById("payByMCAmount").innerHTML = Math.max(0, remainingCost);
 }
 
@@ -445,7 +447,12 @@ function payAndPromote() {
   resourceValue[resourceTypeToIdx["Steel"]] -= document.getElementById("payBySteelAmount").innerHTML;
   logStr += document.getElementById("payBySteelAmount").innerHTML + " Steel, ";
   resourceValue[resourceTypeToIdx["Titanium"]] -= document.getElementById("payByTitaniumAmount").innerHTML;
-  logStr += document.getElementById("payByTitaniumAmount").innerHTML + " Titanium ";
+  logStr += document.getElementById("payByTitaniumAmount").innerHTML + " Titanium";
+  if (Number(document.getElementById("payByHeatAmount").innerHTML) > 0) {
+    resourceValue[resourceTypeToIdx["Heat"]] -= document.getElementById("payByHeatAmount").innerHTML;
+    logStr += ", " + document.getElementById("payByHeatAmount").innerHTML + " Heat ";
+  }
+  
 
   // Update resource & production
   if (typeof projCardForPromotion.resource !== 'undefined') {
@@ -506,10 +513,13 @@ function isPlayable(number) {
 
     availableMoney = resourceValue[0];
     if (typeof projCard.tag !== 'undefined' && projCard.tag.Building > 0) {
-      availableMoney += resourceValue[1] * worth_Steel
+      availableMoney += resourceValue[1] * worth_Steel;
     }
     if (typeof projCard.tag !== 'undefined' && projCard.tag.Space > 0) {
-      availableMoney += resourceValue[2] * worth_Titanium
+      availableMoney += resourceValue[2] * worth_Titanium;
+    }
+    if (cardsUsed.has("CORP03")) {
+      availableMoney += resourceValue[resourceTypesSmallToIdx["heat"]] * worth_Heat;
     }
     return availableMoney >= projCard.cost;
   } else {
@@ -1135,6 +1145,13 @@ function selectCard (clickedCard) {
         } else {
           document.getElementById("payByTitanium").style = "display: none"; 
           document.getElementById("payByTitaniumAmount").innerHTML = 0;
+        }
+        if (cardsUsed.has("CORP03")) { // Helion
+          document.getElementById("payByHeat").style.display = "block"; 
+          document.getElementById("payByHeatAmount").innerHTML = 0; // For Heat, default not to use.
+        } else {
+          document.getElementById("payByHeat").style.display = "none"; 
+          document.getElementById("payByHeatAmount").innerHTML = 0;
         }
 
         document.getElementById("payByMCAmount").innerHTML = remainingCost;
