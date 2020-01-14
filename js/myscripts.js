@@ -243,6 +243,14 @@ function updateRes(resType, changeVal) {
 }
 
 function produce() {
+  var resp = confirm("Do you really want to PRODUCE?");
+  if (resp == false) {
+    return;
+  }
+
+  resourceValue[resourceTypeToIdx["Heat"]] += resourceValue[resourceTypeToIdx["Energy"]]
+  resourceValue[resourceTypeToIdx["Energy"]] = 0;
+
   resourceTypesSmall.forEach(function (type, index) {
     resourceValue[index] += resourceProduction[index];
   });
