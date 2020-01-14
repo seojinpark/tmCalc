@@ -400,7 +400,7 @@ function payAndPromote() {
   cardsUsed.add(projCardForPromotion.number);
   cardsInHand.delete(projCardForPromotion.number);
   projCardForPromotion = null;
-  document.getElementById("paymentFooter").style = "display: none";
+  document.getElementById("paymentFooter").style.display = "none";
   clearInput();
   refreshScreen();
 }
