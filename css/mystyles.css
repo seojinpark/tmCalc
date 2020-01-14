@@ -10,6 +10,7 @@ body {
   background-repeat:no-repeat;
   background-size:100%;background-attachment: fixed;
   background-position-y:-200px;
+  margin-bottom: 500px;
 }
 
 /*project card div*/

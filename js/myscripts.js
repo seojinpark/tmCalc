@@ -324,8 +324,13 @@ function buyAndSave(price) {
 
   // Add to hand set.
   cardsInHand.add(projCardForPromotion.number);
-  // document.getElementById("buyAndSave").disabled = true;
-  // document.getElementById("saveCard").disabled = true;
+  document.getElementById("paymentFooter").style.display = "none";
+  refreshScreen();
+}
+
+function sellCard() {
+  resourceValue[resourceTypeToIdx["MC"]] += 1;
+  cardsInHand.delete(projCardForPromotion.number);
   refreshScreen();
 }
 
@@ -458,6 +463,15 @@ function displayCardsOnly() {
 }
 
 ////////////////////// FILTER FUCTION ///////////////////////////////
+function filterWrapperForSearch(event, id) {
+  if (event.key === 'Enter') {
+    filterFunction(id);
+  } 
+  // else {
+  //   console.log("filtered filterFunction().. key was: " + event.key);
+  // }
+}
+
 function filterFunction(id) {
   console.log("invoked filterFunction()");
   refreshUnplayableCard();
@@ -1002,6 +1016,16 @@ function selectCard (clickedCard) {
           document.getElementById("paymentFooter").style.display = "block";
         } else {
           document.getElementById("paymentFooter").style.display = "none";
+        }
+
+        if (cardsInHand.has(projCard.number)) {
+          document.getElementById("buyAndSave").style.display = "none";
+          document.getElementById("saveCard").style.display = "none";
+          document.getElementById("sellCard").style.display = "inline-block";
+        } else {
+          document.getElementById("buyAndSave").style.display = "inline-block";
+          document.getElementById("saveCard").style.display = "inline-block";
+          document.getElementById("sellCard").style.display = "none";
         }
         
         // document.getElementById("paymentCardTitle").innerHTML = "Wanna promote \"" + projCard.title + "\" ?<BR>";

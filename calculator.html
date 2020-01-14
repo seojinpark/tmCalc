@@ -137,7 +137,7 @@
       <button id="showHand"  class="button btn-undo  " onclick="showHand();" >Hand</button>
       <button id="showUsed"  class="button btn-undo  " onclick="showUsed();" >Used</button>
       <button id="content"  class="button btn-undo  " onclick="toggleContentDiv();" title="reveal Card Content filters">CONTENT</button>
-      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <input type="text" id="myInput" onkeydown="filterWrapperForSearch(event, id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
       
       <button id="btn-produce" class="button btn-produce" onclick="produce();" title="produce">PRODUCE</button>
       <button id="undo" class="button2 btn-undo" onclick="undo();" title="Undo action">UNDO</button>
@@ -8726,6 +8726,7 @@
   <div id="paymentFooter" style="display: none; zoom: 150%">
     <button id="buyAndSave" class="button2 btn-produce" style="width: fit-content;" onclick="buyAndSave(3);" >Buy & Save</button>
     <button id="saveCard" class="button2 btn-produce" style="width: fit-content;" onclick="buyAndSave(0);" >Save (free)</button>
+    <button id="sellCard" class="button2 btn-produce" style="width: fit-content;" onclick="sellCard();" >Sell</button>
     <button id="closePaymentPanel" class="button2 btn-produce" style="width: 40px;" onclick='document.getElementById("paymentFooter").style.display = "none"' >X</button>
     <div id="paymentCardCost" class="price" style="display: inline-block; margin-top: -5px; margin-right: 15px">Cost comes here</div>
     <div id="paymentCardTitle" class="title" style="margin-top: 5px; text-align: left; padding-left: 10px">Title comes here</div>
