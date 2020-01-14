@@ -137,7 +137,8 @@
       <button id="showHand"  class="button btn-undo  " onclick="showHand();" >Hand</button>
       <button id="showUsed"  class="button btn-undo  " onclick="showUsed();" >Used</button>
       <button id="content"  class="button btn-undo  " onclick="toggleContentDiv();" title="reveal Card Content filters">...</button>
-      <input type="text" id="myInput" onkeydown="filterWrapperForSearch(event, id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <input type="text" id="myInput" onkeydown="filterWrapperForSearch(event, id);" placeholder="Type here" title="Search by card's title, number or keywords">
+      <button id="findButton"  class="button btn-undo  " onclick="filterFunction('myInput');" style="margin-left: -10px;">Find</button>
       
       <button id="btn-produce" class="button btn-produce" onclick="produce();" title="produce">PRODUCE</button>
       <button id="undo" class="button2 btn-undo" onclick="undo();" title="Undo action">UNDO</button>
