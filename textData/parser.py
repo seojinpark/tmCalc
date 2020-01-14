@@ -63,17 +63,17 @@ def scanProjectCards(f):
             continue
         if step == 1:
             # match tags
-            match = re.match('(Earth|Jovian|Space|Event|City|Building|Power|Science|Plant|Animal|Microbe) tag.*', line)
+            match = re.match('(Earth|Jovian|Space|Event|City|Building|Power|Science|Plant|Animal|Microbe|Wild) tag.*', line)
             if not match:
                 step += 1
             else:
                 tagTexts = [x.strip() for x in line.split(',')]
                 assert(len(tagTexts) > 0)
                 tags = {
-                    "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0
+                    "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0
                 }
                 for tagText in tagTexts:
-                    matchTag = re.match('(Earth|Jovian|Space|Event|City|Building|Power|Science|Plant|Animal|Microbe) tag', tagText)
+                    matchTag = re.match('(Earth|Jovian|Space|Event|City|Building|Power|Science|Plant|Animal|Microbe|Wild) tag', tagText)
                     if not matchTag:
                         print("Can't parse tag text! line: " + line + ", tagText: " + tagText)
                     tags[matchTag.group(1)] += 1

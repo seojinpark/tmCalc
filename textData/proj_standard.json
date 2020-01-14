@@ -1,0 +1,51 @@
+[
+    {
+        "cost": 0,
+        "resource": {
+            "M$": 1
+        },
+        "number": "S01",
+        "title": "Sell Patents"
+    },
+    {
+        "production": {
+            "Energy": 1
+        },
+        "cost": 11,
+        "number": "S02",
+        "title": "Power Plant"
+    },
+    {
+        "cost": 14,
+        "terraforming": {
+            "TempUp": 1
+        },
+        "number": "S03",
+        "title": "Asteroid"
+    },
+    {
+        "cost": 18,
+        "terraforming": {
+            "Ocean Tile": 1
+        },
+        "number": "S04",
+        "title": "Aquifer"
+    },
+    {
+        "cost": 23,
+        "terraforming": {
+            "O2": 1
+        },
+        "number": "S05",
+        "title": "Greenery"
+    },
+    {
+        "production": {
+            "M$": 1
+        },
+        "outcome": "City Tile\n",
+        "cost": 25,
+        "number": "S06",
+        "title": "City"
+    }
+]

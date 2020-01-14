@@ -23,8 +23,9 @@ Cost: 23
 ------
 O2
 
-S05: City
+S06: City
 Cost: 25
 ------
 Increase M$ 1
 City Tile
+

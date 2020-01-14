@@ -90,23 +90,34 @@
       <br>
       
 
+      <button id="buildingTag" class="button btn2 tagStatus tag-building  "  onclick="filterFunction(id)" title="filter by Building tag"></button>
+      <div id="BuildingStatus" class="tagValue"></div>
+      <button id="spaceTag" class="button btn2 tagStatus tag-space  " onclick="filterFunction(id)" title="filter by Space tag"></button>
+      <div id="SpaceStatus" class="tagValue"></div>
+      <button id="scienceTag" class="button btn2 tagStatus tag-science  " onclick="filterFunction(id)" title="filter by Science tag"></button>
+      <div id="ScienceStatus" class="tagValue"></div>
 
-      <button id="spaceTag" class="button btn2 tag-space  " onclick="filterFunction(id)" title="filter by Space tag"></button>
-      <button id="scienceTag" class="button btn2 tag-science  " onclick="filterFunction(id)" title="filter by Science tag"></button>
+      <button id="plantTag" class="button btn2 tagStatus tag-plant  " onclick="filterFunction(id)" title="filter by Plant tag"></button>
+      <div id="PlantStatus" class="tagValue"></div>
+      <button id="microbeTag" class="button btn2 tagStatus tag-microbe  " onclick="filterFunction(id)" title="filter by Microbe tag"></button>
+      <div id="MicrobeStatus" class="tagValue"></div>
+      <button id="animalTag" class="button btn2 tagStatus tag-animal  " onclick="filterFunction(id)" title="filter by Animal tag"></button>
+      <div id="AnimalStatus" class="tagValue"></div>
 
-      <button id="plantTag" class="button btn2 tag-plant  " onclick="filterFunction(id)" title="filter by Plant tag"></button>
-      <button id="microbeTag" class="button btn2 tag-microbe  " onclick="filterFunction(id)" title="filter by Microbe tag"></button>
-      <button id="animalTag" class="button btn2 tag-animal  " onclick="filterFunction(id)" title="filter by Animal tag"></button>
+      <button id="powerTag" class="button btn2 tagStatus tag-power  " onclick="filterFunction(id)" title="filter by Power tag"></button>
+      <div id="PowerStatus" class="tagValue"></div>
+      <button id="jovianTag" class="button btn2 tagStatus tag-jovian  " onclick="filterFunction(id)" title="filter by Jovian tag"></button>
+      <div id="JovianStatus" class="tagValue"></div>
+      <button id="earthTag" class="button btn2 tagStatus tag-earth  "  onclick="filterFunction(id)" title="filter by Earth tag"></button>
+      <div id="EarthStatus" class="tagValue"></div>
 
-      <button id="powerTag" class="button btn2 tag-power  " onclick="filterFunction(id)" title="filter by Power tag"></button>
-      <button id="jovianTag" class="button btn2 tag-jovian  " onclick="filterFunction(id)" title="filter by Jovian tag"></button>
-      <button id="earthTag" class="button btn2 tag-earth  "  onclick="filterFunction(id)" title="filter by Earth tag"></button>
-
-      <button id="cityTag" class="button btn2 tag-city  "  onclick="filterFunction(id)" title="filter by City tag"></button>
-      <button id="eventTag" class="button btn2 tag-event  "  onclick="filterFunction(id)" title="filter by Event tag"></button>
-      <button id="venusTag" class="button btn2 tag-venus  " onclick="filterFunction(id)" title="filter by Venus tag"></button>
-
-      <button id="wildTag" class="button btn2 tag-wild" onclick="filterFunction(id)" title="filter by Wild tag"></button>
+      <button id="cityTag" class="button btn2 tagStatus tag-city  "  onclick="filterFunction(id)" title="filter by City tag"></button>
+      <div id="CityStatus" class="tagValue"></div>
+      <button id="eventTag" class="button btn2 tagStatus tag-event  "  onclick="filterFunction(id)" title="filter by Event tag"></button>
+      <div id="EventStatus" class="tagValue"></div>
+      <!-- <button id="venusTag" class="button btn2 tag-venus  " onclick="filterFunction(id)" title="filter by Venus tag"></button> -->
+      <button id="wildTag" class="button btn2 tagStatus tag-wild" onclick="filterFunction(id)" title="filter by Wild tag"></button>
+      <div id="WildStatus" class="tagValue"></div>
 
     </div>
 
@@ -283,6 +294,7 @@
       <div id="plant_worth_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updatePlantWorth(-1)" title="decrease Price filter by 1">-</button>
         <button class="button2   btn-price" style="margin-right:3px;" onclick="updatePlantWorth(1)" >+</button>
+        <button class="button2   btn-price" style="margin-right:3px; background-color: rgb(87, 228, 82);" onclick="plantTree()" >G</button>
       </div>
       <div id="plant" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="plant_edit" class="resource-edit" style="display:none">
@@ -8252,6 +8264,58 @@
           </div>
         </li>
   </ul>
+
+
+  <!--Standard Projects-->
+  <ul class="myUL" style="clear:both;">
+    <div class="ul-title">STANDARD PROJECT</div>
+
+        <li onclick="getClickedCard();" class="filterDiv standard-card">
+          <div class="title background-color-standard">Sell Patents</div>
+          <div class="price">0</div>
+          <div class="number" style="margin-left:99px;">#S01</div>
+          <div class="content">
+            <!-- <div class="resource money">1</div> -->
+          </div>
+        </li>
+        <li onclick="getClickedCard();" class="filterDiv standard-card">
+          <div class="title background-color-standard">Power Plant</div>
+          <div class="price">11</div>
+          <div class="number" style="margin-left:99px;">#S02</div>
+          <div class="content">
+          </div>
+        </li>
+        <li onclick="getClickedCard();" class="filterDiv standard-card">
+          <div class="title background-color-standard">Asteroid</div>
+          <div class="price">14</div>
+          <div class="number" style="margin-left:99px;">#S03</div>
+          <div class="content">
+          </div>
+        </li>
+        <li onclick="getClickedCard();" class="filterDiv standard-card">
+          <div class="title background-color-standard">Aquifer</div>
+          <div class="price">18</div>
+          <div class="number" style="margin-left:99px;">#S04</div>
+          <div class="content">
+          </div>
+        </li>
+        <li onclick="getClickedCard();" class="filterDiv standard-card">
+          <div class="title background-color-standard">Greenery</div>
+          <div class="price">23</div>
+          <div class="number" style="margin-left:99px;">#S05</div>
+          <div class="content">
+          </div>
+        </li>
+        <li onclick="getClickedCard();" class="filterDiv standard-card">
+          <div class="title background-color-standard">City</div>
+          <div class="price">25</div>
+          <div class="number" style="margin-left:99px;">#S06</div>
+          <div class="content">
+          </div>
+        </li>
+
+    </ul>
+
 
   <!--COLONIES-->
   <ul class="myUL" style="clear:both;">

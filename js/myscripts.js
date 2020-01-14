@@ -17,6 +17,7 @@ loadCardData("textData/proj.json")
 loadCardData("textData/preludeCards.json")
 loadCardData("textData/corp.json")
 loadCardData("textData/corp_prelude.json")
+loadCardData("textData/proj_standard.json")
 
 var projDataIndexed = {};
 projData.forEach(function (projCard, index) {
@@ -44,6 +45,10 @@ var terraformingValue = [20, 0, 0, -30];
 var terraformingMax = [99, 9, 14, 8];
 var terraformingStep = [1, 1, 1, 2];
 var terraformingSpecialCombo = [[], [], [8], [-24, -20, 0]];
+
+var tagsPlayed = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 };
+var discountByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 }; //TODO: implement
+var rebateByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 }; //TODO: implement
 var logdata = []
 var stage = 1
 var cardsInHand = new Set();
@@ -95,6 +100,26 @@ function showAll() {
 }
 
 ////////////////////// My code! ////////////////////////////
+function plantTree() {
+  if (resourceValue[resourceTypesSmallToIdx["plant"]] < worth_Plant) {
+    alert ("Not enough plants!");
+    return;
+  }
+
+  resourceValue[resourceTypesSmallToIdx["plant"]] -= worth_Plant;
+  var logStr = "Greenery using " + worth_Plant;
+  var i = terraformingTypesSmallToIdx["o2"];
+  newO2Val = Math.min(terraformingMax[i], terraformingValue[i] + terraformingStep[i]);
+  if (newO2Val > terraformingValue[i]) {
+    terraformingValue[0] += 1;
+    logStr += "; TR: " + terraformingValue[0] + " (+1) ";
+    terraformingValue[i] = newO2Val;
+    logStr += "; o2: " + terraformingValue[i] + " (+1) ";
+  }
+  log(logStr);
+  refreshScreen();
+}
+
 function showLogs() {
   var textLog = "";
   for (var i = 0; i < logdata.length; i++) {
@@ -136,6 +161,16 @@ function refreshStatus() {
       document.getElementById("terraforming_" + type + "_slider").value = terraformingValue[index];
     }
   });
+
+  for (var tag of Object.keys(tagsPlayed)) {
+    document.getElementById(tag + "Status").innerHTML = tagsPlayed[tag];
+    if (discountByTag[tag] > 0) {
+      document.getElementById(tag + "Status").innerHTML += "(-" + discountByTag[tag] + ")";
+    }
+    if (rebateByTag[tag] > 0) {
+      document.getElementById(tag + "Status").innerHTML += "(+" + rebateByTag[tag] + ")";
+    }
+  }
 }
 
 function refreshUnplayableCard() {
@@ -359,7 +394,7 @@ function buyAndSave(price) {
 
   // Pay the price.
   resourceValue[resourceTypeToIdx["MC"]] -= price;
-  log("Bought a proj card: " + projCardForPromotion.title);
+  log("Purchase: " + projCardForPromotion.title);
 
   // Add to hand set.
   cardsInHand.add(projCardForPromotion.number);
@@ -376,6 +411,12 @@ function sellCard() {
 function payAndPromote() {
   if (projCardForPromotion == null) {
     alert ("Error. No card is selected for promotion.");
+    return;
+  } else if (cardsInHand.has(projCardForPromotion.number) == false
+      && projCardForPromotion.number.startsWith("CORP") == false
+      && projCardForPromotion.number.startsWith("P") == false
+      && projCardForPromotion.number.startsWith("S") == false) {
+    alert ("This card is not in hand.");
     return;
   }
 
@@ -396,7 +437,7 @@ function payAndPromote() {
   }
 
 
-  var logStr = "PaidAndPromoted " + projCardForPromotion.title + " using ";
+  var logStr = "Promote " + projCardForPromotion.title + " using ";
 
   // Pay for the card
   resourceValue[resourceTypeToIdx["MC"]] -= document.getElementById("payByMCAmount").innerHTML;
@@ -437,6 +478,13 @@ function payAndPromote() {
       }
       terraformingValue[i] = newVal;
       logStr += "; " + type + ": " + terraformingValue[i] + " (+" + effectiveChange * terraformingStep[i] + ") ";
+    }
+  }
+
+  // Increment tag counts
+  if (typeof projCardForPromotion.tag !== 'undefined') {
+    for (var type of Object.keys(projCardForPromotion.tag)) {
+      tagsPlayed[type] += projCardForPromotion.tag[type];
     }
   }
   
