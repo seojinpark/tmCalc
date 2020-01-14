@@ -1,6 +1,4 @@
-Prelude Corporations 
-
-Cheung Shing Mars
+CORP18: Cheung Shing Mars
 Building tag
 Starting resources:
 44 M$
@@ -10,7 +8,7 @@ Effect:
 Building: -2 M$
 (Effect: When you play a building tag, you pay 2 M$ less for it.)
 
-Point Luna
+CORP19: Point Luna
 Earth tag, Space tag
 Starting resources:
 38 M$
@@ -20,8 +18,7 @@ Effect:
 Earth: +Card
 (Effect: When you play an Earth tag, including this, draw a card.)
 
-Robinson Industries 
-(No tags) 
+CORP20: Robinson Industries 
 Starting resources: 
 47 M$
 (You start with 47 M$.)
@@ -29,7 +26,7 @@ Action:
 4 M$ -> Increase ? 1*
 (Action: Spend 4 M$ to increase (one of) your LOWEST PRODUCTION 1 step.)
 
-Valley Trust
+CORP21: Valley Trust
 Earth tag
 Starting resources: 
 37 M$
@@ -39,7 +36,7 @@ Effect:
 Science: -2 M$
 (Effect: When you play a science tag, you pay 2 M$ less for it.)
 
-Vitor
+CORP22: Vitor
 Earth tag
 Starting resources: 
 45 M$

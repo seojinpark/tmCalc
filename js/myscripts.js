@@ -6,15 +6,18 @@ var contentFiltersCurrent = CONTENT_FILTERS;
 var selectedCards = "";
 var selectedCardsAmount = 0;
 
-var request = new XMLHttpRequest();
-request.open("GET", "textData/proj.json", false);
-request.send(null);
-var projData_basic = JSON.parse(request.responseText);
-var request2 = new XMLHttpRequest();
-request2.open("GET", "textData/preludeCards.json", false);
-request2.send(null);
-var projData_prelude = JSON.parse(request2.responseText);
-var projData = projData_basic.concat(projData_prelude);
+var projData = [];
+function loadCardData(path) {
+  var request = new XMLHttpRequest();
+  request.open("GET", path, false);
+  request.send(null);
+  projData = projData.concat(JSON.parse(request.responseText));
+}
+loadCardData("textData/proj.json")
+loadCardData("textData/preludeCards.json")
+loadCardData("textData/corp.json")
+loadCardData("textData/corp_prelude.json")
+
 var projDataIndexed = {};
 projData.forEach(function (projCard, index) {
   projDataIndexed[projCard.number] = projCard;
@@ -24,8 +27,8 @@ var resourceTypes = ['MC', 'Steel', 'Titanium', 'Plant', 'Energy', 'Heat'];
 var resourceTypeToIdx = {'MC': 0, 'M\$': 0, 'Steel': 1, 'Titanium': 2, 'Plant': 3, 'Energy': 4, 'Heat': 5};
 var resourceTypesSmall = ['mc', 'steel', 'titanium', 'plant', 'energy', 'heat'];
 var resourceTypesSmallToIdx = {'mc': 0, 'm\$': 0, 'steel': 1, 'titanium': 2, 'plant': 3, 'energy': 4, 'heat': 5};
-var resourceValue = [42, 10, 5, 0, 0, 0];
-var resourceProduction = [-1, 0, 1, 0, 0, 0];
+var resourceValue = [0, 0, 0, 0, 0, 0]; //var resourceValue = [42, 10, 5, 0, 0, 0];
+var resourceProduction = [0, 0, 0, 0, 0, 0];
 var worth_Steel = 2;
 var worth_Titanium = 3;
 var worth_Plant = 8;
@@ -41,8 +44,8 @@ var terraformingValue = [20, 0, 0, -30];
 var terraformingMax = [99, 9, 14, 8];
 var terraformingStep = [1, 1, 1, 2];
 var terraformingSpecialCombo = [[], [], [8], [-24, -20, 0]];
-var log_all = []
-var log_current = []
+var logdata = []
+var stage = 1
 var cardsInHand = new Set();
 var cardsUsed = new Set();
 var lastClickedCard = null;
@@ -52,7 +55,7 @@ urlString = window.location.href;
 cards = parseURLParams(urlString);
 
 //display all card or only few ones if pointed
-if (cards == "ALL") {showAll();}
+if (cards == "ALL") {showAll(); showCorp();}
 else {
   displayCardsOnly(cards);
   zoomSingleCard();}
@@ -92,6 +95,30 @@ function showAll() {
 }
 
 ////////////////////// My code! ////////////////////////////
+function showLogs() {
+  var textLog = "";
+  for (var i = 0; i < logdata.length; i++) {
+    textLog += "[" + i + "]  " + logdata[i][0] + "\n";
+  }
+  alert(textLog);
+}
+
+function showCorp() {
+  x = document.querySelectorAll('li.filterDiv');
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].querySelector(".number") == null) {
+      w3AddClass(x[i], "show");
+    }
+  }
+  li = document.querySelectorAll('li.show');   //obtaining the new visible list after the subfilters check
+  for (var i = 0;  i < li.length; i++) { li[i].classList.add("show");}
+}
+
+function log(msg) {
+  logdata.push([msg, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
+}
+
 function refreshScreen() {
   refreshStatus();
   showHand();
@@ -173,14 +200,14 @@ function showHand() {
 }
 
 function undo() {
-  if (log_current.length > 1) {  
-    var resp = confirm("Do you really want to UNDO the following action?\n" + log_current[log_current.length - 1][0]);
+  if (logdata.length > 1) {  
+    var resp = confirm("Do you really want to UNDO the following action?\n" + logdata[logdata.length - 1][0]);
     if (resp == false) {
       return;
     }
 
-    var lastAction = log_current.pop();
-    var stateBeforeLastAction = log_current[log_current.length - 1];
+    var lastAction = logdata.pop();
+    var stateBeforeLastAction = logdata[logdata.length - 1];
     resourceValue = stateBeforeLastAction[1];
     resourceProduction = stateBeforeLastAction[2];
     terraformingValue = stateBeforeLastAction[3];
@@ -199,6 +226,10 @@ function toggleResEditDiv(id) {
     // alert("changed to block-inline");
   } else {
     document.getElementById(id + "_edit").style.display = "none";
+    // log("Updated " + id + " to " + document.getElementById(id).innerHTML);
+    if (id in resourceTypesSmallToIdx) {
+      log("Updated " + id + " to " + resourceValue[resourceTypesSmallToIdx[id]]);
+    }
   }
 }
 
@@ -209,7 +240,7 @@ function updateSteelWorth(changeVal) {
   }
   worth_Steel = newAmount;
   document.getElementById("steel_worth").innerHTML = newAmount;
-  log_current.push(["Steel is now worth: " + newAmount, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
+  log("Steel is now worth: " + newAmount);
 }
 
 function updateTitaniumWorth(changeVal) {
@@ -219,7 +250,7 @@ function updateTitaniumWorth(changeVal) {
   }
   worth_Titanium = newAmount;
   document.getElementById("titanium_worth").innerHTML = newAmount;
-  log_current.push(["Titanium is now worth: " + newAmount, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
+  log("Titanium is now worth: " + newAmount);
 }
 
 function updatePlantWorth(changeVal) {
@@ -229,7 +260,7 @@ function updatePlantWorth(changeVal) {
   }
   worth_Plant = newAmount;
   document.getElementById("plant_worth").innerHTML = newAmount;
-  log_current.push(["A tree now costs " + newAmount + " plants. ", resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
+  log("A tree now costs " + newAmount + " plants. ");
 }
 
 function updateRes(resType, changeVal) {
@@ -248,30 +279,26 @@ function produce() {
     return;
   }
 
-  resourceValue[resourceTypeToIdx["Heat"]] += resourceValue[resourceTypeToIdx["Energy"]]
+  resourceValue[resourceTypeToIdx["Heat"]] += resourceValue[resourceTypeToIdx["Energy"]];
   resourceValue[resourceTypeToIdx["Energy"]] = 0;
 
   resourceTypesSmall.forEach(function (type, index) {
     resourceValue[index] += resourceProduction[index];
   });
-  resourceValue[resourceTypeToIdx["MC"]] += terraformingValue[terraformingTypesToIdx["TR"]]
+  resourceValue[resourceTypeToIdx["MC"]] += terraformingValue[terraformingTypesToIdx["TR"]];
 
-  log_all.push(log_current.slice(0));
-  log_current = [["Produce", resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]];
-  console.log(log_all);
+  log("Produce");
   refreshScreen();
 }
 
+
 function updateProd(id) {
-  resourceTypesSmall.forEach(function (type, index) {
-    resourceProduction[index] = Number(document.getElementById("prod_" + type).value);
-  });
-  // prod_mc = document.getElementById("prod_mc").value;
-  // prod_steel = document.getElementById("prod_steel").value;
-  // prod_titanium = document.getElementById("prod_titanium").value;
-  // prod_plant = document.getElementById("prod_plant").value;
-  // prod_energy = document.getElementById("prod_energy").value;
-  // prod_heat = document.getElementById("prod_heat").value;
+  resType = id.substring(5);
+  resourceProduction[resourceTypesSmallToIdx[resType]] = Number(document.getElementById(id).value);
+  if (logdata.length > 0 && logdata[logdata.length - 1][0].startsWith("Updated production of " + resType)) {
+    logdata.pop();
+  }
+  log("Updated production of " + resType + " to " + Number(document.getElementById(id).value));
 }
 
 function updateTerraforming(type, newVal) {
@@ -286,6 +313,7 @@ function updateTerraforming(type, newVal) {
   if (type != "tr") {
     document.getElementById("terraforming_" + type + "_slider").value = terraformingValue[index];
   }
+  log("Updated " + type + " to " + terraformingValue[index]);
 }
 
 function updatePay(resType, changeVal) {
@@ -324,11 +352,14 @@ function buyAndSave(price) {
   } else if (cardsInHand.has(projCardForPromotion.number)) {
     alert ("This card is already in hand.");
     return;
+  } else if (resourceValue[resourceTypeToIdx["MC"]] < price) {
+    alert ("Not enough MC to buy this card.");
+    return;
   }
 
   // Pay the price.
   resourceValue[resourceTypeToIdx["MC"]] -= price;
-  log_current.push(["Bought a proj card: " + projCardForPromotion.title, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
+  log("Bought a proj card: " + projCardForPromotion.title);
 
   // Add to hand set.
   cardsInHand.add(projCardForPromotion.number);
@@ -409,7 +440,7 @@ function payAndPromote() {
     }
   }
   
-  log_current.push([logStr, resourceValue.slice(0), resourceProduction.slice(0), terraformingValue.slice(0)]);
+  log(logStr);
   cardsUsed.add(projCardForPromotion.number);
   cardsInHand.delete(projCardForPromotion.number);
   projCardForPromotion = null;
