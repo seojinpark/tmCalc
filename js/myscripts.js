@@ -48,6 +48,7 @@ var terraformingStep = [1, 1, 1, 2];
 var terraformingSpecialCombo = [[], [], [8], [-24, -20, 0]];
 
 var tagsPlayed = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 };
+var tagsDisplayed = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 };
 var discountByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 }; //TODO: implement
 var rebateByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 }; //TODO: implement
 var logdata = []
@@ -163,8 +164,8 @@ function refreshStatus() {
     }
   });
 
-  for (var tag of Object.keys(tagsPlayed)) {
-    document.getElementById(tag + "Status").innerHTML = tagsPlayed[tag];
+  for (var tag of Object.keys(tagsDisplayed)) {
+    document.getElementById(tag + "Status").innerHTML = tagsDisplayed[tag];
     if (discountByTag[tag] > 0) {
       document.getElementById(tag + "Status").innerHTML += "(-" + discountByTag[tag] + ")";
     }
@@ -492,6 +493,9 @@ function payAndPromote() {
   if (typeof projCardForPromotion.tag !== 'undefined') {
     for (var type of Object.keys(projCardForPromotion.tag)) {
       tagsPlayed[type] += projCardForPromotion.tag[type];
+      if (type == "Event" || projCardForPromotion.tag["Event"] == 0) { // Tags on Event cards don't count for requirements.
+        tagsDisplayed[type] += projCardForPromotion.tag[type];
+      }
     }
   }
   
