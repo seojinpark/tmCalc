@@ -124,7 +124,7 @@ function plantTree() {
 
 function showLogs() {
   var textLog = "";
-  for (var i = 0; i < logdata.length; i++) {
+  for (var i = logdata.length - 1; i >= Math.max(0, logdata.length - 10); i--) {
     textLog += "[" + i + "]  " + logdata[i][0] + "\n";
   }
   alert(textLog);
