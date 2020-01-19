@@ -24,6 +24,80 @@ projData.forEach(function (projCard, index) {
   projDataIndexed[projCard.number] = projCard;
 });
 
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function snapshot() {
+  var state = {}
+  state["resourceValue"] = resourceValue;
+  state["resourceProduction"] = resourceProduction;
+  state["worth_Steel"] = worth_Steel;
+  state["worth_Titanium"] = worth_Titanium;
+  state["worth_Plant"] = worth_Plant;
+  state["worth_Heat"] = worth_Heat;
+  state["proj_discount"] = proj_discount;
+  state["proj_rebate"] = proj_rebate;
+  state["vp"] = vp;
+  state["terraformingValue"] = terraformingValue;
+  state["tagsPlayed"] = tagsPlayed;
+  state["tagsDisplayed"] = tagsDisplayed;
+  state["discountByTag"] = discountByTag;
+  state["rebateByTag"] = rebateByTag;
+  state["logdata"] = logdata;
+  state["generation"] = generation;
+  state["cardsInHand"] = Array.from(cardsInHand);
+  state["cardsUsed"] = Array.from(cardsUsed);
+  var stateInJson = JSON.stringify(state);
+  console.log(stateInJson);
+  download('tmCalc.json', stateInJson);
+}
+
+function loadState(stateInText) {
+  var state = JSON.parse(stateInText);
+  resourceValue = state["resourceValue"];
+  resourceProduction =   state["resourceProduction"];
+  worth_Steel =   state["worth_Steel"];
+  worth_Titanium =   state["worth_Titanium"];
+  worth_Plant =   state["worth_Plant"];
+  worth_Heat =   state["worth_Heat"];
+  proj_discount =   state["proj_discount"];
+  proj_rebate =   state["proj_rebate"];
+  vp =   state["vp"];
+  terraformingValue =   state["terraformingValue"];
+  tagsPlayed =   state["tagsPlayed"];
+  tagsDisplayed =   state["tagsDisplayed"];
+  discountByTag =   state["discountByTag"];
+  rebateByTag =   state["rebateByTag"];
+  logdata =   state["logdata"];
+  generation =   state["generation"];
+  cardsInHand =   new Set(state["cardsInHand"]);
+  cardsUsed =   new Set(state["cardsUsed"]);
+  alert("Completed loading data: \n" + stateInText);
+  refreshScreen();
+}
+
+function loadFromFile() {
+  var fileToUpload = $('#loadFromFile').prop('files')[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    // e.target.result should contain the text
+    // console.log(e.target.result);
+    loadState(e.target.result);
+  };
+  reader.readAsText(fileToUpload);
+  // var data = reader.result;
+}
+
 var resourceTypes = ['MC', 'Steel', 'Titanium', 'Plant', 'Energy', 'Heat'];
 var resourceTypeToIdx = {'MC': 0, 'M\$': 0, 'Steel': 1, 'Titanium': 2, 'Plant': 3, 'Energy': 4, 'Heat': 5};
 var resourceTypesSmall = ['mc', 'steel', 'titanium', 'plant', 'energy', 'heat'];
@@ -52,7 +126,7 @@ var tagsDisplayed = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0
 var discountByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0, "AnyProjCard": 0, "StandardProj": 0 }; //TODO: implement
 var rebateByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0, "AnyProjCard": 0, "StandardProj": 0 }; //TODO: implement
 var logdata = []
-var stage = 1
+var generation = 1
 var cardsInHand = new Set();
 var cardsUsed = new Set();
 var lastClickedCard = null;
@@ -98,7 +172,6 @@ function showAll() {
   //showing all cards
   x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
-  console.log("invoked ShowAll()");
 }
 
 ////////////////////// My code! ////////////////////////////
@@ -128,6 +201,7 @@ function showLogs() {
     textLog += "[" + i + "]  " + logdata[i][0] + "\n";
   }
   alert(textLog);
+  // snapshot();
 }
 
 function showCorp() {
@@ -211,7 +285,6 @@ function showUsed() {
 }
 
 function showHand() {
-  console.log("cardsInHand: " + cardsInHand);
   x = document.querySelectorAll('li.filterDiv');
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
@@ -223,12 +296,12 @@ function showHand() {
         if (isPlayable(rawNumber) == false) {
           w3AddClass(x[i], "unplayable-card");
         }
-        console.log("showing " + x[i].querySelector(".number").textContent + " by .number");
+        // console.log("showing " + x[i].querySelector(".number").textContent + " by .number");
       }
     } else {
       if (cardsInHand.has(x[i].id)) {
         w3AddClass(x[i], "show");
-        console.log("showing " + x[i].id+ " by .id");
+        // console.log("showing " + x[i].id+ " by .id");
       }
     }
   }
@@ -324,6 +397,7 @@ function produce() {
   });
   resourceValue[resourceTypeToIdx["MC"]] += terraformingValue[terraformingTypesToIdx["TR"]];
 
+  generation++;
   log("Produce");
   refreshScreen();
 }
@@ -583,25 +657,25 @@ function parseURLParams(url) {
         query = url.slice(queryStart, queryEnd - 1)
     cards = "#" + query.replace(/\#/g, " #").toUpperCase().split(" ");
     if (query === url || query === "") return "ALL";
-    console.log(cards);
+    // console.log(cards);
     return cards;
 }
 
 ////////////////////// Display only pointed cards ///////////////////
 function displayCardsOnly() {
-  console.log("cards: " + cards);
+  // console.log("cards: " + cards);
   //showing only the pointed cards
   x = document.querySelectorAll('li.filterDiv');
   for (i = 0; i < x.length; i++) {
     if (x[i].querySelector(".number") != null) {
       if (cards.includes(x[i].querySelector(".number").textContent)) {
         w3AddClass(x[i], "show");
-        console.log("showing " + x[i].querySelector(".number").textContent + "by .number");
+        // console.log("showing " + x[i].querySelector(".number").textContent + "by .number");
       }
     } else {
       if (cards.includes(x[i].id)) {
         w3AddClass(x[i], "show");
-        console.log("showing " + x[i].id+ "by .id");
+        // console.log("showing " + x[i].id+ "by .id");
       }
     }
   }
@@ -624,7 +698,7 @@ function filterWrapperForSearch(event, id) {
 }
 
 function filterFunction(id) {
-  console.log("invoked filterFunction()");
+  // console.log("invoked filterFunction()");
   refreshUnplayableCard();
   var input, filter, ul, li, a, i, x;
 
