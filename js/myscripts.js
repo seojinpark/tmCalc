@@ -49,8 +49,8 @@ var terraformingSpecialCombo = [[], [], [8], [-24, -20, 0]];
 
 var tagsPlayed = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 };
 var tagsDisplayed = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 };
-var discountByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 }; //TODO: implement
-var rebateByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0 }; //TODO: implement
+var discountByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0, "AnyProjCard": 0, "StandardProj": 0 }; //TODO: implement
+var rebateByTag = { "Earth": 0, "Jovian": 0, "Space": 0, "Event": 0, "City": 0, "Building": 0, "Power": 0, "Science": 0, "Plant": 0, "Animal": 0, "Microbe": 0, "Wild": 0, "AnyProjCard": 0, "StandardProj": 0 }; //TODO: implement
 var logdata = []
 var stage = 1
 var cardsInHand = new Set();
@@ -498,6 +498,11 @@ function payAndPromote() {
       }
     }
   }
+
+  // Rebate the cost
+  var rebate = calcRebate(projCardForPromotion);
+  resourceValue[resourceTypeToIdx["MC"]] += rebate;
+  logStr += "; Rebate " + rebate + " MC ";
   
   log(logStr);
   cardsUsed.add(projCardForPromotion.number);
@@ -506,6 +511,46 @@ function payAndPromote() {
   document.getElementById("paymentFooter").style.display = "none";
   clearInput();
   refreshScreen();
+}
+
+function calcDiscount(projCard) { // Returns discount value in negative number
+  var discount = 0;
+  if (typeof projCard.tag !== 'undefined') {
+    for (var type of Object.keys(projCard.tag)) {
+      if (projCard.tag[type] > 0) {
+        discount += discountByTag[type];
+      }
+    }
+  }
+  if (projCard.number.startsWith("S")) {
+    discount += discountByTag["StandardProj"];
+  }
+  discount += discountByTag["AnyProjCard"];
+  if (discount > 0) {
+    alert ("Discount amount should be negative. Please correct the error.");
+  }
+  return discount;
+}
+
+function calcRebate(projCard) {
+  var rebate = 0;
+  if (typeof projCard.tag !== 'undefined') {
+    for (var type of Object.keys(projCard.tag)) {
+      if (projCard.tag[type] > 0) {
+        rebate += rebateByTag[type];
+      }
+    }
+  }
+  if (projCard.number.startsWith("S")) {
+    rebate += rebateByTag["StandardProj"];
+  }
+  rebate += rebateByTag["AnyProjCard"];
+
+  // Special rules
+  if (cardsUsed.has("CORP01") && projCard.cost >= 20) { // Credicor
+    rebate += 4;
+  }
+  return rebate;
 }
 
 function isPlayable(number) {
@@ -525,7 +570,7 @@ function isPlayable(number) {
     if (cardsUsed.has("CORP03")) {
       availableMoney += resourceValue[resourceTypesSmallToIdx["heat"]] * worth_Heat;
     }
-    return availableMoney >= projCard.cost;
+    return availableMoney >= projCard.cost + calcDiscount(projCard);
   } else {
     return false;
   }
@@ -562,11 +607,17 @@ function displayCardsOnly() {
   }
 }
 
+function updateTagProperty() {
+  var tag = document.getElementById("discount_resType").innerHTML;
+  discountByTag[tag] = Number(document.getElementById("discount_value").value);
+  rebateByTag[tag] = Number(document.getElementById("rebate_value").value);
+}
+
 ////////////////////// FILTER FUCTION ///////////////////////////////
 function filterWrapperForSearch(event, id) {
   if (event.key === 'Enter') {
     filterFunction(id);
-  } 
+  }
   // else {
   //   console.log("filtered filterFunction().. key was: " + event.key);
   // }
@@ -579,6 +630,20 @@ function filterFunction(id) {
 
   clickedElementID = document.getElementById(id);
   if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+
+  //If tag button was clicked, display discount info.
+  if(clickedElementID != null && clickedElementID.classList.contains("tagStatus")) {
+    if (clickedElementID.classList.contains("active")) {
+      document.getElementById("buttonsContainer-discount").style.display = "block";
+      var tagLower = id.substring(0, id.length - 3);
+      var tag = tagLower.charAt(0).toUpperCase() + tagLower.substring(1);
+      document.getElementById("discount_resType").innerHTML = tag;
+      document.getElementById("discount_value").value = discountByTag[tag];
+      document.getElementById("rebate_value").value = rebateByTag[tag];
+    } else {
+      document.getElementById("buttonsContainer-discount").style.display = "none";
+    }
+  }
 
   x = document.querySelectorAll('.filterDiv');
   for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
@@ -1131,7 +1196,19 @@ function selectCard (clickedCard) {
         // document.getElementById("paymentCardTitle").innerHTML = "Wanna promote \"" + projCard.title + "\" ?<BR>";
         document.getElementById("paymentCardTitle").innerHTML = projCard.title + "<BR>";
         document.getElementById("paymentCardCost").innerHTML = projCard.cost;
-        remainingCost = projCard.cost;
+        var discount = calcDiscount(projCard);
+        if (discount != 0) {
+          document.getElementById("discountAmount").innerHTML = "Discount: " + discount;
+        } else {
+          document.getElementById("discountAmount").innerHTML = ""
+        }
+        var rebate = calcRebate(projCard);
+        if (rebate != 0) {
+          document.getElementById("discountAmount").innerHTML += " Rebate: " + rebate;
+        }
+
+        remainingCost = Math.max(projCard.cost + discount, 0);
+        // TODO: display discount and apply the discount amount.
         if (typeof projCard.tag !== 'undefined' && projCard.tag.Building > 0) {
           document.getElementById("payBySteel").style = "display: block"; 
           steelPayAmount = Math.min(resourceValue[1], Math.floor(remainingCost / worth_Steel))

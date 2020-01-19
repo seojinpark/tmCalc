@@ -432,6 +432,8 @@ border-right: 2px solid rgb(137,137,137);
 
 
 /*********** Style the tags ************/
+.tag-standardProj {background-image: url("../images/tags/tag-standardProj.png")}
+.tag-anyProj {background-image: url("../images/tags/tag-anyProj.png")}
 .tag-wild {background-image: url("../images/tags/tag-wild.png")}
 .tag-building {background-image: url("../images/tags/tag-building.png")}
 .tag-space {background-image: url("../images/tags/tag-space.png")}

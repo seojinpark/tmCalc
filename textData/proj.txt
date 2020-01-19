@@ -799,7 +799,7 @@ Gain Plant 2
 Science tag, Power tag 
 Cost: 8 
 Requires: 5 Science 
-Space: -M$ 
+Space: -2 M$ 
 (Effect: When you play a Space card, you pay 2 M$ less for it.) 
 ------
 Increase Energy 6 
