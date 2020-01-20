@@ -41,12 +41,12 @@ function download(filename, text) {
 }
 
 function save() {
-  var stateInJson = snapshot();
+  var stateInJson = snapshot(false);
   download('tmCalc.json', stateInJson);
 }
 
 function getURL() {
-  var stateInJson = snapshot();
+  var stateInJson = snapshot(true);
   var element = document.createElement('a');
   element.setAttribute('href', origin + "#" + encodeURIComponent(stateInJson));
   element.setAttribute('target', "_blank");
@@ -60,7 +60,7 @@ function getURL() {
   document.body.removeChild(element);
 }
 
-function snapshot() {
+function snapshot(truncLog) {
   var state = {}
   state["resourceValue"] = resourceValue;
   state["resourceProduction"] = resourceProduction;
@@ -80,6 +80,9 @@ function snapshot() {
   state["generation"] = generation;
   state["cardsInHand"] = Array.from(cardsInHand);
   state["cardsUsed"] = Array.from(cardsUsed);
+  if (truncLog) {
+    state["logdata"] = [];
+  }
   var stateInJson = JSON.stringify(state);
   console.log(stateInJson);
   return stateInJson;
