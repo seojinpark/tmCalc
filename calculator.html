@@ -316,7 +316,7 @@
       </div>
       <input type="number" class="productionStatus" title="MC production" id="prod_energy" oninput="updateProd(id);" value="0" min="-99" max="99"></input>
 
-      <div class="heat resourceStatus" ></div>
+      <div class="heat resourceStatus" onclick="tempUpByHeat();" style="cursor: pointer;"></div>
       <div id="heat" class="totalCardsCount odometer" onclick="toggleResEditDiv(id);"></div>
       <div id="heat_edit" class="resource-edit" style="display:none">
         <button title="decrease Price filter by 1" class="button2   btn-price" onclick="updateRes('heat', -1)" title="decrease Price filter by 1">-</button>

@@ -195,6 +195,27 @@ function plantTree() {
   refreshScreen();
 }
 
+function tempUpByHeat() {
+  var HeatToTempRatio = 8;
+  if (resourceValue[resourceTypesSmallToIdx["heat"]] < HeatToTempRatio) {
+    alert ("Not enough heat!");
+    return;
+  }
+
+  resourceValue[resourceTypesSmallToIdx["heat"]] -= HeatToTempRatio;
+  var logStr = "TempUp using " + HeatToTempRatio;
+  var i = terraformingTypesSmallToIdx["temp"];
+  newVal = Math.min(terraformingMax[i], terraformingValue[i] + terraformingStep[i]);
+  if (newVal > terraformingValue[i]) {
+    terraformingValue[0] += 1;
+    logStr += "; TR: " + terraformingValue[0] + " (+1) ";
+    terraformingValue[i] = newVal;
+    logStr += "; temp: " + terraformingValue[i] + " (+1) ";
+  }
+  log(logStr);
+  refreshScreen();
+}
+
 function showLogs() {
   var textLog = "";
   for (var i = logdata.length - 1; i >= Math.max(0, logdata.length - 10); i--) {
