@@ -24,6 +24,30 @@ projData.forEach(function (projCard, index) {
   projDataIndexed[projCard.number] = projCard;
 });
 
+// Prevent auto-zooming on ipad.
+(function($) {
+  var iemobile = navigator.userAgent.toLowerCase().indexOf("IEMobile") == -1 ? false : true;
+  var isTouch = "ontouchstart" in window || typeof(navigator.msMaxTouchPoints) !== "undefined" && navigator.msMaxTouchPoints > 0 || iemobile;
+  if(isTouch)
+  $.fn.nodoubletapzoom = function()
+  {
+    $(this).bind('touchstart', function preventZoom(e)
+    {
+      var t2 = e.timeStamp;
+      var t1 = $(this).data('lastTouch') || t2;
+      var dt = t2 - t1;
+      var fingers = e.originalEvent.touches.length;
+      $(this).data('lastTouch', t2);
+      if (!dt || dt > 500 || fingers > 1)
+      {
+        return;
+      }
+      e.preventDefault();
+      $(e.target).trigger('click');
+    });
+  };
+})(jQuery);
+
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
