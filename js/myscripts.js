@@ -29,8 +29,10 @@ function download(filename, text) {
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   // element.setAttribute('href', 'data:application/octet-stream;charset=utf-8' + encodeURIComponent(text));
   element.setAttribute('download', filename);
+  element.setAttribute('target', "_blank");
 
   element.style.display = 'none';
+  element.target = "_blank"
   document.body.appendChild(element);
 
   element.click();
