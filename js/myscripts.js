@@ -598,8 +598,9 @@ function calcDiscount(projCard) { // Returns discount value in negative number
   }
   if (projCard.number.startsWith("S")) {
     discount += discountByTag["StandardProj"];
+  } else {
+    discount += discountByTag["AnyProjCard"];
   }
-  discount += discountByTag["AnyProjCard"];
   if (discount > 0) {
     alert ("Discount amount should be negative. Please correct the error.");
   }
@@ -617,8 +618,9 @@ function calcRebate(projCard) {
   }
   if (projCard.number.startsWith("S")) {
     rebate += rebateByTag["StandardProj"];
+  } else {
+    rebate += rebateByTag["AnyProjCard"];
   }
-  rebate += rebateByTag["AnyProjCard"];
 
   // Special rules
   if (cardsUsed.has("CORP01") && projCard.cost >= 20) { // Credicor
