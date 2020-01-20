@@ -1268,7 +1268,7 @@ Earth tag, Event tag
 Cost: 3
 ------
 Reduce M$ 1. 
-+M$10
+Gain M$ 10
 (Decrease your M$ production 1 step. Gain 10 M$.) 
 
 152: Insulation
