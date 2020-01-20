@@ -1883,7 +1883,7 @@ border-right: 2px solid rgb(137,137,137);
     height: 40px;
     line-height: 40px;
     display: inline-block;
-    width: 450px;
+    width: 400px;
     margin-left: 5px;
     text-align: center;
 }
@@ -1891,7 +1891,7 @@ border-right: 2px solid rgb(137,137,137);
 .title-style {
   font-family: Prototype;
   font-size: 26px;
-  margin-left: 60px;
+  margin-left: 10px;
   margin-top: 5px;
   transform:scale(1.5,1);
   background:#222;

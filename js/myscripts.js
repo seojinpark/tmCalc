@@ -40,6 +40,26 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
+function save() {
+  var stateInJson = snapshot();
+  download('tmCalc.json', stateInJson);
+}
+
+function getURL() {
+  var stateInJson = snapshot();
+  var element = document.createElement('a');
+  element.setAttribute('href', origin + "#" + encodeURIComponent(stateInJson));
+  element.setAttribute('target', "_blank");
+
+  element.style.display = 'none';
+  element.target = "_blank"
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
 function snapshot() {
   var state = {}
   state["resourceValue"] = resourceValue;
@@ -62,7 +82,7 @@ function snapshot() {
   state["cardsUsed"] = Array.from(cardsUsed);
   var stateInJson = JSON.stringify(state);
   console.log(stateInJson);
-  download('tmCalc.json', stateInJson);
+  return stateInJson;
 }
 
 function loadState(stateInText) {
@@ -101,6 +121,19 @@ function loadFromFile() {
   // var data = reader.result;
 }
 
+function loadFromURL(url) {
+  var queryStart = url.indexOf("#") + 1;
+  var queryEnd   = url.length + 1;
+  var stateInText = decodeURIComponent(url.slice(queryStart, queryEnd - 1));
+  if (stateInText === url || stateInText === "") {
+    return url;
+  } else {
+    console.log("StateInText:\n" + stateInText);
+    loadState(stateInText);
+    return url.slice(0, queryStart - 1);
+  }
+}
+
 var resourceTypes = ['MC', 'Steel', 'Titanium', 'Plant', 'Energy', 'Heat'];
 var resourceTypeToIdx = {'MC': 0, 'M\$': 0, 'Steel': 1, 'Titanium': 2, 'Plant': 3, 'Energy': 4, 'Heat': 5};
 var resourceTypesSmall = ['mc', 'steel', 'titanium', 'plant', 'energy', 'heat'];
@@ -136,7 +169,10 @@ var lastClickedCard = null;
 
 //parse the url
 urlString = window.location.href;
-cards = parseURLParams(urlString);
+origin = loadFromURL(urlString);
+console.log(origin);
+// cards = parseURLParams(urlString);
+cards = "ALL"
 
 //display all card or only few ones if pointed
 if (cards == "ALL") {showAll(); showCorp();}
