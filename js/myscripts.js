@@ -252,6 +252,10 @@ function refreshStatus() {
     document.getElementById("prod_" + type).value = resourceProduction[index];
   });
 
+  document.getElementById("steel_worth").innerHTML = worth_Steel;
+  document.getElementById("titanium_worth").innerHTML = worth_Titanium;
+  document.getElementById("plant_worth").innerHTML = worth_Plant;
+  
   terraformingTypesSmall.forEach(function (type, index) {
     document.getElementById("terraforming_" + type).value = terraformingValue[index];
     if (type != "tr") {
@@ -474,7 +478,7 @@ function updatePay(resType, changeVal) {
   steelPayAmount = document.getElementById("payBySteelAmount").innerHTML;
   titaniumPayAmount = document.getElementById("payByTitaniumAmount").innerHTML;
   heatPayAmount = document.getElementById("payByHeatAmount").innerHTML;
-  remainingCost = projCardForPromotion.cost - steelPayAmount * worth_Steel - titaniumPayAmount * worth_Titanium - heatPayAmount * worth_Heat;
+  remainingCost = projCardForPromotion.cost + calcDiscount(projCardForPromotion) - steelPayAmount * worth_Steel - titaniumPayAmount * worth_Titanium - heatPayAmount * worth_Heat;
   document.getElementById("payByMCAmount").innerHTML = Math.max(0, remainingCost);
 }
 
